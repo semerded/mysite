@@ -48,7 +48,7 @@
                 <img src="/pictures/stm32board.png" alt="stm32 nucleo-144" title="stm32 nucleo-144" id="board_img"
                     onclick="rotateBoardImg()">
                 <figcaption><i>The test board that was used</i></figcaption><br>
-                <p>more info...</p>
+                <p>The team that I'll be visiting during my internship will be the connectivity group. They make the connections between the (Philips) devices and your mobile phone/the cloud. They make this ranging from toothbrushes to vacuum cleaners to lightbulbs</p>
             </div>
 
             <line style="background-color: aqua;" id="blog_start"></line>
@@ -64,12 +64,13 @@
                         <p>
                             I had to work with Docker to set up a virtual environment. I had to follow a step by step
                             guide provided by my internship leader. The next step was to clone a GitHub repository with
-                            all the data to make projects with the test board. This took ages to clone so I took a little
+                            all the data to make projects with the test board. This took ages to clone so I took a
+                            little
                             brake. When it was finally ready I had to build a project. But there was a secret surprise
                             hiding in my computer. <strong style="color: aqua;">My storage!</strong> Around 3/4 of the
                             loading it gave an error: my diskspace was full. It used literally everything it could use:
                             There was 15MB left. It gave me the option to completely whipe my progress
-                            and start over again. After letting it load for another hour it finnaly finished. I tried it
+                            and start over again. After letting it load for another hour it finally finished. I tried it
                             out that night after my swimming practice. The test programs that came with the GitHub
                             repository worked on the board and a Led started blinking. But writing my own code was
                             difficult. C++ is a weird language and I couldnt just compile the program. It had to be run
@@ -90,9 +91,68 @@
                     <h1 style="color: aqua;">Making The Website</h1>
                     <h3><i>30/10/2023</i></h3>
                     <article>
-                        <p>I thought it was a nice little extra to make a website. I had made websites in the past but mostly to play little games on. This was the first time I had to make an actual informatif website.
+                        <p>I thought it was a nice little extra to make a website. I had made websites in the past but
+                            mostly to play little games on. This was the first time I had to make an actual informatif
+                            website.
                         </p>
-                        <p>Making a website always starts with a homepage</p>
+                        <p>Making a website always starts with a homepage. I had a fun idea: write <strong
+                                style="color: greenyellow;">"Hello World!"</strong> in
+                            every language I know. I also added a fun little gimmick: when you click on the hello world
+                            text it will be copied to your clipboard.</p>
+                        <p>
+                            I als made an about me page. It includes my age down to the second, my hobbies and info
+                            about my dog (I may add more later).
+                        </p>
+                        <p>
+                            The next page was a page where I share my projects. I'm really excited making this and
+                            sharing my projects with the world. It will also includes links to HTML projects I've made
+                            previously.
+                        </p>
+                        <p>
+                            The last page was a blog page. For now I will only use it for my blog about my Philips
+                            internship but I may add more blogs later. I will write a blog every day after my internship
+                            at Philips about my experience.
+                        </p>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
+
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">My first day at Philips</h1>
+                    <h3><i>06/11/2023</i></h3>
+                    <article>
+                        <p>Today was my first day at Philips. Let me tell you!
+                        </p>
+                        <p>Yes I'm doing an internship in Eindhoven while I live in 'boerengat' Maaseik. Luckly the boss
+                            of the team where I'll do my internship gives me a lift to Eindhoven. I'm befriended with
+                            his daughter and because of them I can do an internship at Philips. Big thanks to Amy and
+                            Mike! Mike is awesome and it was a fun ride to Eindhoven. He also has a cool car! The
+                            Philips was big! We took some tea and went to his office. He explained how the team works
+                            and what they do.</p>
+                        <p>
+                            I was introduced to my internship leader Rob. He was the only one in the office. The rest of
+                            the team worked from home. I met some of them shortly online. We started by making a Git
+                            repository for my small little project. Ofcourse I can't work straight away with the
+                            projects they do: they are way to complicated! We imported the opensource software they have
+                            created for the test board. After some trail and error we finally managed to do it. We tried
+                            the debug led and it worked! Then I learned how to print info to the boards terminal. I
+                            couldn't just access it on my computer. I had to download a special program that
+                            communicates with the board to read it's datalines. To make it simple:
+                        <blockquote style="text-align: center;"><i>"I write data from my computer to a testboard with a
+                                program to then read the data from the testboard to my computer with a program"</i>
+                        </blockquote>
+                        That is it basically...
+                        </p>
+                        <p>I tried figuring out how the timer function works. So to put it simple: when the
+                            microcontroller starts, it will start counting the uptime in milliseconds. You could use
+                            this to make a button that you have to hold for 1 second:
+                        <blockquote>You save the time when the button is pressed and save the current time. By
+                            subtracting these 2 you will get the time that the button is on hold (basic time
+                            calculations)</blockquote>I couldn't finish it today so tomorrow is another day!</p>
+                        <p>It was cool seeing how a team works in an office and how it exactly works. I will also be
+                            working with a small robot that I'll be controlling with a mobile app!</p>
                     </article>
                     <line style="background-color: aqua; height: 5px;"></line>
                 </div>
@@ -103,7 +163,7 @@
             <!-- <div class="blog">
                 <div class="blog_block">
                     <h1 style="color: aqua;">Title</h1>
-                    <h3><i>23/10/2023</i></h3>
+                    <h3><i>23/11/2023</i></h3>
                     <article>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi enim omnis tempore tenetur dolorem cupiditate, voluptas molestiae nesciunt, minima saepe dignissimos mollitia placeat nam, libero earum dicta unde officiis.
                         Ipsam nobis ullam soluta minus atque laudantium unde, quibusdam labore in sequi sunt quo eveniet dolores! Repudiandae laboriosam placeat neque itaque soluta est inventore iusto quaerat et, non fugiat similique!
