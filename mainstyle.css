@@ -60,3 +60,10 @@ line {
     width: 100%;
     display: block;
 }
+
+
+@media (max-width: 1000px) {
+    #main_container {
+        width: 100vw;
+    }
+}
