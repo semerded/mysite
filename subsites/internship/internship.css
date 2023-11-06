@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background-color: rgba(164, 225, 246, 0.716);
+}
+
+nav button {
+    border: 7px solid aqua;
+}
+
+header h1 {
+    background-color: aqua;
+}
+
+#board_img {
+    width: calc((100vw - 5vw) / 2);
+
+}
+
+.board_img_spin {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.board_img_spin_back {
+    transform: rotate(0deg);
+    transition: 0s;
+}
+
+
+figcaption {
+    text-align: center;
+}
+
+.blog {
+    display: flex;
+    justify-content: center;
+}
+
+.blog_block {
+    width: 80%;
+    display: block;
+}
+
+.blog h1 {
+    font-weight: bolder;
+}
+
+#go_to_blog_start {
+    text-align: center;
+}
+
+#go_to_blog_start a {
+    color: red;
+}

@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background-image: url("pictures/homebackground.jpg");
+}
+
+nav button {
+    border: 7px solid orange;
+}
+
+header h1 {
+    background-color: orange;
+
+}
+
+.class {
+    color: yellow;
+}
+
+.function {
+    color: aqua;
+    font-weight: bolder;
+}
+
+.string {
+    color: greenyellow;
+}
+
+.var {
+    color: rgb(249, 49, 49);
+}
+
+.indication {
+    color: rgb(197, 5, 197);
+}
+
+.code_container {
+    font-size: 25px;
+}
+

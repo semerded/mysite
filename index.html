@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sem Van Broekhoven</title>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="functions.js"></script>
+    <script src="/footer/footer.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>My Own Cozy Home Page</h1>
+        <nav>
+            <button style="background-color: white; color: black;">Home</button>
+            <button onclick="location.href='subsites/aboutme/aboutme.html'">About Me</button>
+            <button onclick="location.href='subsites/codes/codes.html'">My Projects</button>
+            <button onclick="location.href='subsites/internship/internship.html'">Internship Blog</button>
+            
+        </nav>
+    </header>
+    <main>
+        <div id="main_container">
+            <h1 style="font-size: 70px; text-align: center;">HELLO <strong style="color: orange;">THERE!</strong></h1>
+            <br>
+            <p style="font-size: 40px;">I'm Sem and I like <strong style="color: orange;">coding!</strong><br></p>
+            <h3 style="font-size: 50px;">I can code in:</h3>
+            <div class="code_container">
+                <p onclick="copyCodeExample(0)" title="click me to copy the code">
+                    Python:<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong class="function">print</strong>(<strong
+                        class="string">"Hello World!"</strong>)</p>
+                <br>
+                <p onclick="copyCodeExample(1)" title="click me to copy the code">
+                    JavaScript:<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong class="class">console</strong>.<strong
+                        class="function">log</strong>(<strong class="string">"Hello World"</strong>);</p>
+                <br>
+                <p onclick="copyCodeExample(2)" title="click me to copy the code">
+                    Java:<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong class="indication">class</strong> <strong
+                        class="class">hello {</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong
+                        class="indication">public static void</strong> <strong class="function">main</strong><strong
+                        class="indication">(</strong><strong class="class">String</strong><strong
+                        class="function">[]</strong> <strong class="var">args</strong><strong class="indication">)
+                        {</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong
+                        class="class">System</strong>.<strong class="var">out</strong>.<strong
+                        class="function">println(</strong><strong class="string">"Hello World!"</strong><strong
+                        class="function">)</strong>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong
+                        class="indication">}</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;<strong class="class">}</strong></p>
+                <br>
+                <p onclick="copyCodeExample(3)" title="click me to copy the code">
+                    Dart:<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong class="indication">void</strong> <strong
+                        class="function">main</strong><strong class="class">()
+                        {</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong
+                        class="function">print</strong><strong class="indication">(</strong><strong
+                        class="string">"Hello World!"</strong><strong
+                        class="indication">)</strong>;<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong class="class">}</strong></p>
+                <br>
+                <p onclick="copyCodeExample(4)" title="click me to copy the code">
+                    C++:<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong class="indication">#include</strong> <strong
+                        class="string">&lt;iostream&gt;</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;<strong
+                        class="indication">using namespace</strong> <strong
+                        class="class">std</strong>;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<strong
+                        class="indication">int</strong> <strong class="function">main</strong><strong class="class">()
+                        {</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout <strong class="indication">
+                        << </strong> <strong class="string">"Hello World!"</strong>;<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong
+                                class="class">}</strong></p>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

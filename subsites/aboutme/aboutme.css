@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+
+nav button {
+    border: 7px solid rgb(221, 255, 0);
+}
+
+header h1 {
+    background-color: rgb(211, 255, 0);
+}
+
+main {
+    font-size: 20px;
+}
+
+b {
+    color: yellow;
+}
+
+#DOEZEL {
+    font-size: 100px;
+    color: yellow;
+}
+
+#DOEZEL:hover {
+    color: snow;
+}

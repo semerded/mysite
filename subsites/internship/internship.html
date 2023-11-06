@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="internship.css" />
+    <link rel="stylesheet" type="text/css" href="../../mainstyle.css" />
+    <script src="internship.js"></script>
+    <script src="/footer/footer.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Internship Blogs</h1>
+        <nav>
+            <button onclick="location.href='../../index.html'">Home</button>
+            <button onclick="location.href='../aboutme/aboutme.html'">About Me</button>
+            <button onclick="location.href='../codes/codes.html'">My Projects</button>
+            <button style="background-color: white; color: black;">Internship Blog</button>
+        </nav>
+    </header>
+    <main>
+        <div id="main_container">
+            <h1 style="text-align: center;">My <strong style="color: aqua; font-weight: bolder;">Philips</strong>
+                Internship Experience</h1>
+            <h4 id="go_to_blog_start"><a href="#blog_start">go to blog</a></h4>
+            <line style="background-color: aqua;"></line>
+            <div id="general_info">
+                <p>Well... I've reached my final year of Highschool. And with that comes a lot of projects and extra
+                    things. Like a final project, chrysostomos, school trip and of course an internship. We had to find
+                    our own place before the end of october so we could follow a 2 week internship. I've chosen for:</p>
+                <div style="text-align: center;">
+                    <a title="official website"
+                        href="https://www.philips.com/a-w/about/innovation/innovation-hubs/eindhoven.html"
+                        style="text-decoration: none;">
+                        <h1 style="color: white; text-decoration: underline; text-decoration-color: aqua;">Koninklijke
+                            <strong
+                                style="color: aqua; text-decoration: underline; text-decoration-color: white;">Philips</strong>
+                        </h1>
+                    </a>
+                    <h4>In Eindhoven</h4>
+                </div>
+                <p>I have to say: this is an amazing place to do an internship. I was provided with a testboard that
+                    they used to simulate the connection between the device and the surroundings</p>
+                <img src="/pictures/stm32board.png" alt="stm32 nucleo-144" title="stm32 nucleo-144" id="board_img"
+                    onclick="rotateBoardImg()">
+                <figcaption><i>The test board that was used</i></figcaption><br>
+                <p>more info...</p>
+            </div>
+
+            <line style="background-color: aqua;" id="blog_start"></line>
+
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">First Test With The Test Board</h1>
+                    <h3><i>23/10/2023</i></h3>
+                    <article>
+                        <p>It was a whole process making the board work, but after a lot of hours of work I finally
+                            managed to do it. Here is my story.
+                        </p>
+                        <p>
+                            I had to work with Docker to set up a virtual environment. I had to follow a step by step
+                            guide provided by my internship leader. The next step was to clone a GitHub repository with
+                            all the data to make projects with the test board. This took ages to clone so I took a little
+                            brake. When it was finally ready I had to build a project. But there was a secret surprise
+                            hiding in my computer. <strong style="color: aqua;">My storage!</strong> Around 3/4 of the
+                            loading it gave an error: my diskspace was full. It used literally everything it could use:
+                            There was 15MB left. It gave me the option to completely whipe my progress
+                            and start over again. After letting it load for another hour it finnaly finished. I tried it
+                            out that night after my swimming practice. The test programs that came with the GitHub
+                            repository worked on the board and a Led started blinking. But writing my own code was
+                            difficult. C++ is a weird language and I couldnt just compile the program. It had to be run
+                            in debug mode while the board was connected. Also C++ didn't reconize a lot of the
+                            components and didn't give usefull suggestions like other programming languages. I called it
+                            a day and took the board with me the next day to show it to my teacher and figure out how it
+                            worked.
+                        </p>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+
+                </div>
+            </div>
+
+
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">Making The Website</h1>
+                    <h3><i>30/10/2023</i></h3>
+                    <article>
+                        <p>I thought it was a nice little extra to make a website. I had made websites in the past but mostly to play little games on. This was the first time I had to make an actual informatif website.
+                        </p>
+                        <p>Making a website always starts with a homepage</p>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
+
+
+            <!-- blog template -->
+            <!-- <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">Title</h1>
+                    <h3><i>23/10/2023</i></h3>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi enim omnis tempore tenetur dolorem cupiditate, voluptas molestiae nesciunt, minima saepe dignissimos mollitia placeat nam, libero earum dicta unde officiis.
+                        Ipsam nobis ullam soluta minus atque laudantium unde, quibusdam labore in sequi sunt quo eveniet dolores! Repudiandae laboriosam placeat neque itaque soluta est inventore iusto quaerat et, non fugiat similique!
+                        Asperiores incidunt, sint consectetur temporibus porro amet laudantium. Quas ut alias laudantium possimus quaerat distinctio, libero sed sit culpa architecto error voluptates et? Distinctio ea beatae consequatur nostrum, amet animi?
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quae fuga? Laudantium, iure,
+                            reprehenderit praesentium voluptatum expedita minus molestiae explicabo minima deserunt
+                            sapiente ipsam ducimus perspiciatis, sequi dolorum modi natus!</p>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
