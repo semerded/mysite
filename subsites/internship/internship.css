@@ -52,3 +52,10 @@ figcaption {
 #go_to_blog_start a {
     color: red;
 }
+
+@media (max-width: 1000px) {
+    #board_img {
+        width: calc((100vw - 5vw));
+    
+    }
+}

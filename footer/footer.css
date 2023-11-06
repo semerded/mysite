@@ -22,3 +22,21 @@ menu a {
     font-size: larger;
     color: white;
 }
+
+@media (max-width: 1000px) {
+    #footer_main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .column1 {
+        margin-bottom: 20px;
+    }
+
+
+    .column2 {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
