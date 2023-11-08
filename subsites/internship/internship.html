@@ -69,7 +69,7 @@
                             all the data to make projects with the test board. This took ages to clone so I took a
                             little
                             brake. When it was finally ready I had to build a project. But there was a secret surprise
-                            hiding in my computer. <strong style="color: aqua;">My storage!</strong> Around 3/4 of the
+                            hiding in my computer. <strong>My storage!</strong> Around 3/4 of the
                             loading it gave an error: my diskspace was full. It used literally everything it could use:
                             There was 15MB left. It gave me the option to completely whipe my progress
                             and start over again. After letting it load for another hour it finally finished. I tried it
@@ -128,7 +128,7 @@
                     <article>
                         <p>Today was my first day at Philips. Let me tell you!
                         </p>
-                        <p>Yes I'm doing an internship in Eindhoven while I live in 'boerengat' Maaseik. Luckly the boss
+                        <p>Yes I'm doing an internship in Eindhoven while I live in 'boerengat' Maaseik. luckily the boss
                             of the team where I'll do my internship gives me a ride to Eindhoven. I'm befriended with
                             his daughter and because of them I can do an internship at Philips. Big thanks to Amy and
                             Mike! Mike is awesome and it was a fun ride to Eindhoven. He also has a cool car! The
@@ -179,29 +179,54 @@
                             safer code. We are thinking of controlling the robot with a mobile app. If I want to do that
                             I'll have to visit the mobile app department (they sit next to us). But before we can do
                             that we first have to finish the code</p>
-                        <p>We also got a lesson about the difference between pointers and refferences in <strong
-                                style="color: aqua;">C++</strong>. I've also learned the difference between i++ and ++i:
+                        <p>We also got a lesson about the difference between pointers and refferences in
+                            <strong>C++</strong>. I've also learned the difference between i++ and ++i:
                         </p>
                         <blockquote style="font-family: Arial, Helvetica, sans-serif;">
-                            by doing <strong style="color: aqua;">i++</strong> it will first return the value of <strong style="color: aqua;">i</strong> and then it will add 1 to <strong style="color: aqua;">i</strong><br>
-                            <strong style="color: aqua;">++i</strong> will first add 1 to <strong style="color: aqua;">i</strong> and then return the value of <strong style="color: aqua;">i</strong> (with the 1 added)<br>
+                            by doing <strong>i++</strong> it will first return the value of <strong>i</strong> and then
+                            it will add 1 to <strong>i</strong><br>
+                            <strong>++i</strong> will first add 1 to <strong>i</strong> and then return the value of
+                            <strong>i</strong> (with the 1 added)<br>
                         </blockquote>
                         <p>So to sum it up:</p>
                         <blockquote style="font-family: Arial, Helvetica, sans-serif;">
                             let's say we have a var "number" with the value 1<br>
-                            <strong style="color: aqua;">number++</strong> --> return "number" and add 1 to "number" after<br>
-                            <strong style="color: aqua;">++number</strong> --> add 1 to "number" and return "number" after
+                            <strong>number++</strong> --> return "number" and add 1 to "number"
+                            after<br>
+                            <strong>++number</strong> --> add 1 to "number" and return "number"
+                            after
                         </blockquote>
                         <p>
                             I'll remember this the rest of my life!<br>
-                            To end this day I had made a binary counter that uses the 3 built in leds on the test board. It can count from 0 to 7 (8 bits --> 1 byte)!
+                            To end this day I had made a binary counter that uses the 3 built in leds on the test board.
+                            It can count from 0 to 7 (8 bits --> 1 byte)!
                         </p>
-                        <p>Tomorrow is a Wednesday but I still have to work from 8 to 5 so I'll miss my swimming practice :(</p>
+                        <p>Tomorrow is a Wednesday but I still have to work from 8 to 5 so I'll miss my swimming
+                            practice :(</p>
                     </article>
                     <line style="background-color: aqua; height: 5px;"></line>
                 </div>
             </div>
 
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">A longer Wednesday than normal</h1>
+                    <h3><i>08/11/2023</i></h3>
+                    <article>
+                        <p>To be honest, the day passed like a speed train. But normally on Wednesday I have actual interesting classes.
+                        </p>
+                        <p>So... yesterday I was too late and today I was too early. But that doesn't matter because I can do more work. Today I started with the code from yesterday. We had to finalize the unit tests and finish the shiftregister. After that we had to make a PWM controller. The basic principle:</p>
+                        <blockquote>With a PWM you can adjust the speed of a DC motor. Usually you can only turn it on and off. But by using a <strong>Pulse Width Modulation</strong> you can send pulses over the DC line. The wider the pulses the higher motor will turn. An image for more info:</blockquote>
+                        <div style="display: flex; justify-content: center;">
+                            <img src="/pictures/pwmExample.png" alt="https://upload.wikimedia.org/wikipedia/commons/b/b8/Duty_Cycle_Examples.png" style="width: 100%;">
+                        </div>
+                        <p>Rob also showed me how they build software in 3 layers which is a unique experience for me. Then we worked on the PWM code. We couldn't test this code with the unit tests because this is directly based on the clock of the board itself. We finished it and put a general code in the <strong>Main.cpp</strong>. We hooked it up to the robot and... Nothing! After some checking we found out that we missed a part of the code that we had to copy (rookie mistake!). We fixed it and... Nothing! We hooked up an expensive testing kit to a test board to check the PWM output. Well... It did nothing.</p><p>After some digging we found out that there was a small problem in the code. Something we missed that was acutally really dumb. But not from us; from the manufacturers of the shiftregister.<br>To initialize the shiftregister we made a function to turn the shiftregister "on". We did this with -> <strong>enable.Set(true);</strong> because true = on = high = 1 = ...<br>You know what I mean. Well the manufacturers had the amazing idea to turn the shiftregister on by setting the enable pin to <strong>false!</strong>. I don't know which guy thought he was funny at the Texas Instruments office but I will find you!<br>So luckily the robot worked after this. Next up we had to write implementations and I had to write a MOCK for the implemented codes. I also managed to crash Visual Studio Code... Don't ask me how I did that!</p>
+                        <p>That was it for today!</p>
+                        
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
 
             <!-- blog template -->
             <!-- <div class="blog">

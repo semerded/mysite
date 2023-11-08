@@ -31,6 +31,10 @@ figcaption {
     text-align: center;
 }
 
+strong {
+    color: aqua;
+}
+
 .blog {
     display: flex;
     justify-content: center;
