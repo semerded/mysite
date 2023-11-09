@@ -128,7 +128,8 @@
                     <article>
                         <p>Today was my first day at Philips. Let me tell you!
                         </p>
-                        <p>Yes I'm doing an internship in Eindhoven while I live in 'boerengat' Maaseik. luckily the boss
+                        <p>Yes I'm doing an internship in Eindhoven while I live in 'boerengat' Maaseik. luckily the
+                            boss
                             of the team where I'll do my internship gives me a ride to Eindhoven. I'm befriended with
                             his daughter and because of them I can do an internship at Philips. Big thanks to Amy and
                             Mike! Mike is awesome and it was a fun ride to Eindhoven. He also has a cool car! The
@@ -213,16 +214,76 @@
                     <h1 style="color: aqua;">A longer Wednesday than normal</h1>
                     <h3><i>08/11/2023</i></h3>
                     <article>
-                        <p>To be honest, the day passed like a speed train. But normally on Wednesday I have actual interesting classes.
+                        <p>To be honest, the day passed like a speed train. But normally on Wednesday I have actual
+                            interesting classes.
                         </p>
-                        <p>So... yesterday I was too late and today I was too early. But that doesn't matter because I can do more work. Today I started with the code from yesterday. We had to finalize the unit tests and finish the shiftregister. After that we had to make a PWM controller. The basic principle:</p>
-                        <blockquote>With a PWM you can adjust the speed of a DC motor. Usually you can only turn it on and off. But by using a <strong>Pulse Width Modulation</strong> you can send pulses over the DC line. The wider the pulses the higher motor will turn. An image for more info:</blockquote>
+                        <p>So... yesterday I was too late and today I was too early. But that doesn't matter because I
+                            can do more work. Today I started with the code from yesterday. We had to finalize the unit
+                            tests and finish the shiftregister. After that we had to make a PWM controller. The basic
+                            principle:</p>
+                        <blockquote>With a PWM you can adjust the speed of a DC motor. Usually you can only turn it on
+                            and off. But by using a <strong>Pulse Width Modulation</strong> you can send pulses over the
+                            DC line. The wider the pulses the higher motor will turn. An image for more info:
+                        </blockquote>
                         <div style="display: flex; justify-content: center;">
-                            <img src="/pictures/pwmExample.png" alt="https://upload.wikimedia.org/wikipedia/commons/b/b8/Duty_Cycle_Examples.png" style="width: 100%;">
+                            <img src="/pictures/pwmExample.png"
+                                alt="https://upload.wikimedia.org/wikipedia/commons/b/b8/Duty_Cycle_Examples.png"
+                                style="width: 100%;">
                         </div>
-                        <p>Rob also showed me how they build software in 3 layers which is a unique experience for me. Then we worked on the PWM code. We couldn't test this code with the unit tests because this is directly based on the clock of the board itself. We finished it and put a general code in the <strong>Main.cpp</strong>. We hooked it up to the robot and... Nothing! After some checking we found out that we missed a part of the code that we had to copy (rookie mistake!). We fixed it and... Nothing! We hooked up an expensive testing kit to a test board to check the PWM output. Well... It did nothing.</p><p>After some digging we found out that there was a small problem in the code. Something we missed that was acutally really dumb. But not from us; from the manufacturers of the shiftregister.<br>To initialize the shiftregister we made a function to turn the shiftregister "on". We did this with -> <strong>enable.Set(true);</strong> because true = on = high = 1 = ...<br>You know what I mean. Well the manufacturers had the amazing idea to turn the shiftregister on by setting the enable pin to <strong>false!</strong>. I don't know which guy thought he was funny at the Texas Instruments office but I will find you!<br>So luckily the robot worked after this. Next up we had to write implementations and I had to write a MOCK for the implemented codes. I also managed to crash Visual Studio Code... Don't ask me how I did that!</p>
+                        <p>Rob also showed me how they build software in 3 layers which is a unique experience for me.
+                            Then we worked on the PWM code. We couldn't test this code with the unit tests because this
+                            is directly based on the clock of the board itself. We finished it and put a general code in
+                            the <strong>Main.cpp</strong>. We hooked it up to the robot and... Nothing! After some
+                            checking we found out that we missed a part of the code that we had to copy (rookie
+                            mistake!). We fixed it and... Nothing! We hooked up an expensive testing kit to a test board
+                            to check the PWM output. Well... It did nothing.</p>
+                        <p>After some digging we found out that there was a small problem in the code. Something we
+                            missed that was acutally really dumb. But not from us; from the manufacturers of the
+                            shiftregister.<br>To initialize the shiftregister we made a function to turn the
+                            shiftregister "on". We did this with -> <strong>enable.Set(true);</strong> because true = on
+                            = high = 1 = ...<br>You know what I mean. Well the manufacturers had the amazing idea to
+                            turn the shiftregister on by setting the enable pin to <strong>false!</strong>. I don't know
+                            which guy thought he was funny at the Texas Instruments office but I will find you!<br>So
+                            luckily the robot worked after this. Next up we had to write implementations and I had to
+                            write a MOCK for the implemented codes. I also managed to crash Visual Studio Code... Don't
+                            ask me how I did that!</p>
                         <p>That was it for today!</p>
-                        
+
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
+
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">4th day!</h1>
+                    <h3><i>09/11/2023</i></h3>
+                    <article>
+                        <p>Today we worked on the MotorShieldController. This will make it easier to configure and run
+                            the motors.
+                        </p>
+                        <p>I'm starting to understand C++ and it's syntax more and more. I still have some issues
+                            understanding the Test Units. </p>
+                        <p>So for today, the MotorShieldController was a big task. We had to make it so that the motors
+                            can be controlled by changing its speed and direction. But It wasn't that straight forward:
+                            the motors weren't setup easy on the pins:</p>
+                        <blockquote>The shiftregister works on 1 byte (or 8 bit where each bit could be either 1 or 0)
+                            which is <strong>00000000</strong><br>And to set one motor 'high' we have make the bit high.
+                            So in theory if we want the first motor to spin left we set the shiftregister to
+                            <strong>00000001</strong> (bits count backwards). But that wasn't the case. Spin motor 1
+                            left was on bit 2, spin 2 right was on bit 3. The full list:</blockquote>
+                        <blockquote style="font-size: 14px;"><i>#define MOTOR4_A 0 0<br>
+                            #define MOTOR2_A 1 0<br>
+                            #define MOTOR1_A 2 0<br>
+                            #define MOTOR1_B 3 0<br>
+                            #define MOTOR2_B 4 0<br>
+                            #define MOTOR3_A 5 0<br>
+                            #define MOTOR4_B 6 1<br>
+                            #define MOTOR3_B 7 1</i></blockquote>
+                        <blockquote>(motor A is left, motor B is right). 
+                        </blockquote>
+                        <p>So I can up with the idea to config the motors in a map (dictionary in python) and put the motor name as it's own enum and an array of the 2 pins (index 0 for left and index 1 for right). Now we could easily modify the speed and direction. After some bugfixing we made the test work.</p>
+                        <p>Tomorrow we will work on connecting the robot to my smartphone using BLE (Bluetooth Low Energy) used in the Connectivity group. Then I'll finally do the things they do on my department!</p>
                     </article>
                     <line style="background-color: aqua; height: 5px;"></line>
                 </div>
