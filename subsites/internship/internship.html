@@ -289,6 +289,20 @@
                 </div>
             </div>
 
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">The end of the first week</h1>
+                    <h3><i>10/11/2023</i></h3>
+                    <article>
+                        <p>This week passed really fast! I'll tell you what I did today and give a short recap of this week.</p>
+                        <p>I started with another layer on the code for the robot. This code was a little bit more specific than the previous one. The previous layer doens't specify the amount of motor's. We now have left motor en right motor and we can easily control them. Rob worked on the BLE for the robot. It can now advertise (tell other devices it can pair with bluetooth) and my phone can find it.</p><p> I started working on the app. I tried doing it wit Kotlin but after some trying I decided I'm going to try something different. Android studio was really slow and Kotlin was kinda complicated. I knew another language that I've tried before: Dart. Dart has the flutter framework where you can make apps really quick that you could run on Android, IOS, Widows, MacOS, Linux and on the web. Yes it is a multiplatfrom software language. I already did the setup once on my computer. I just had to update some things (which was really easy) and then I could start developing. I tried to make the app layout myself by using some help of the well documented Flutter website. The app has 2 sliders: 1 on each side to control each motor.</p><p>The next step was to make it so you could connect with bluetooth. I followed a tutorial from an Indian guy who explained how to connect to bluetooth. The nice thing about flutter is that you can use your phone as a test bench. I tried it out and... It crashed :(. It was getting pretty late so I couldn't do more testing.</p><p>The nice thing about flutter is that you have hot reload. This means that if you change something in the code, then it will be applied in the test app on your phone without having to rebuild the app and wait minutes to finish. But if the app chrashes then you have to rebuild the app constantly. This is why it took so long.<p><p>So when I was at home I tried the app again. And it worked! So why does it not work at work but it does at home. Well... That is the most interesting part. The app has a scan button, once pressed it will search for bluetooth devices. When I press the search button it shows me all available bluetooth networks in range. But my robot controller (with the bluetooth) was not plugged in and the app ran fine. When I plugged it in but it wasn't pairing (Rob installed a button that you have to press on the controller to start advertising). The moment I pressed the pair button and I scanned again on my phone the app crashed. I don't know why the bluetooth connection of the controller crashes the app. That is what we have to find out on monday!</p>
+                        <h3>Quick recap</h3>
+                        <p>I learned working with unit testing, clean code, C++ development, Flutter development and agile software.</p>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
+
             <!-- blog template -->
             <!-- <div class="blog">
                 <div class="blog_block">
