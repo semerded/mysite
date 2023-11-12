@@ -24,7 +24,6 @@ function timeInBelgium() {
   let month = dateTime.getMonth() + 1; // idk but the month had a weird kronkel in his head
   month = stableNumbers(month);
   const year = dateTime.getFullYear();
-  console.log(dateTime)
   try {
     document.getElementById("time_in_belgium").innerHTML = `${date}-${month}-${year} ${hours}:${minutes}:${seconds}`;
   } catch (error) {
