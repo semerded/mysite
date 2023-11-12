@@ -16,7 +16,7 @@ function timeInBelgium() {
   let hours = dateTime.getHours();
   hours = stableNumbers(hours);
   let minutes = dateTime.getMinutes();
-  mintes = stableNumbers(mintutes);
+  minutes = stableNumbers(mintutes);
   let seconds = dateTime.getSeconds();
   seconds = stableNumbers(seconds);
   let date = dateTime.getDate();
