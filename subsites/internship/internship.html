@@ -271,19 +271,25 @@
                             which is <strong>00000000</strong><br>And to set one motor 'high' we have make the bit high.
                             So in theory if we want the first motor to spin left we set the shiftregister to
                             <strong>00000001</strong> (bits count backwards). But that wasn't the case. Spin motor 1
-                            left was on bit 2, spin 2 right was on bit 3. The full list:</blockquote>
-                        <blockquote style="font-size: 14px;"><i>#define MOTOR4_A 0 0<br>
-                            #define MOTOR2_A 1 0<br>
-                            #define MOTOR1_A 2 0<br>
-                            #define MOTOR1_B 3 0<br>
-                            #define MOTOR2_B 4 0<br>
-                            #define MOTOR3_A 5 0<br>
-                            #define MOTOR4_B 6 1<br>
-                            #define MOTOR3_B 7 1</i></blockquote>
-                        <blockquote>(motor A is left, motor B is right). 
+                            left was on bit 2, spin 2 right was on bit 3. The full list:
                         </blockquote>
-                        <p>So I can up with the idea to config the motors in a map (dictionary in python) and put the motor name as it's own enum and an array of the 2 pins (index 0 for left and index 1 for right). Now we could easily modify the speed and direction. After some bugfixing we made the test work.</p>
-                        <p>Tomorrow we will work on connecting the robot to my smartphone using BLE (Bluetooth Low Energy) used in the Connectivity group. Then I'll finally do the things they do on my department!</p>
+                        <blockquote style="font-size: 14px;"><i>#define MOTOR4_A 0 0<br>
+                                #define MOTOR2_A 1 0<br>
+                                #define MOTOR1_A 2 0<br>
+                                #define MOTOR1_B 3 0<br>
+                                #define MOTOR2_B 4 0<br>
+                                #define MOTOR3_A 5 0<br>
+                                #define MOTOR4_B 6 1<br>
+                                #define MOTOR3_B 7 1</i></blockquote>
+                        <blockquote>(motor A is left, motor B is right).
+                        </blockquote>
+                        <p>So I can up with the idea to config the motors in a map (dictionary in python) and put the
+                            motor name as it's own enum and an array of the 2 pins (index 0 for left and index 1 for
+                            right). Now we could easily modify the speed and direction. After some bugfixing we made the
+                            test work.</p>
+                        <p>Tomorrow we will work on connecting the robot to my smartphone using BLE (Bluetooth Low
+                            Energy) used in the Connectivity group. Then I'll finally do the things they do on my
+                            department!</p>
                     </article>
                     <line style="background-color: aqua; height: 5px;"></line>
                 </div>
@@ -294,15 +300,121 @@
                     <h1 style="color: aqua;">The end of the first week</h1>
                     <h3><i>10/11/2023</i></h3>
                     <article>
-                        <p>This week passed really fast! I'll tell you what I did today and give a short recap of this week.</p>
-                        <p>I started with another layer on the code for the robot. This code was a little bit more specific than the previous one. The previous layer doens't specify the amount of motor's. We now have left motor en right motor and we can easily control them. Rob worked on the BLE for the robot. It can now advertise (tell other devices it can pair with bluetooth) and my phone can find it.</p><p> I started working on the app. I tried doing it wit Kotlin but after some trying I decided I'm going to try something different. Android studio was really slow and Kotlin was kinda complicated. I knew another language that I've tried before: Dart. Dart has the flutter framework where you can make apps really quick that you could run on Android, IOS, Widows, MacOS, Linux and on the web. Yes it is a multiplatfrom software language. I already did the setup once on my computer. I just had to update some things (which was really easy) and then I could start developing. I tried to make the app layout myself by using some help of the well documented Flutter website. The app has 2 sliders: 1 on each side to control each motor.</p><p>The next step was to make it so you could connect with bluetooth. I followed a tutorial from an Indian guy who explained how to connect to bluetooth. The nice thing about flutter is that you can use your phone as a test bench. I tried it out and... It crashed :(. It was getting pretty late so I couldn't do more testing.</p><p>The nice thing about flutter is that you have hot reload. This means that if you change something in the code, then it will be applied in the test app on your phone without having to rebuild the app and wait minutes to finish. But if the app chrashes then you have to rebuild the app constantly. This is why it took so long.<p><p>So when I was at home I tried the app again. And it worked! So why does it not work at work but it does at home. Well... That is the most interesting part. The app has a scan button, once pressed it will search for bluetooth devices. When I press the search button it shows me all available bluetooth networks in range. But my robot controller (with the bluetooth) was not plugged in and the app ran fine. When I plugged it in but it wasn't pairing (Rob installed a button that you have to press on the controller to start advertising). The moment I pressed the pair button and I scanned again on my phone the app crashed. I don't know why the bluetooth connection of the controller crashes the app. That is what we have to find out on monday!</p>
+                        <p>This week passed really fast! I'll tell you what I did today and give a short recap of this
+                            week.</p>
+                        <p>I started with another layer on the code for the robot. This code was a little bit more
+                            specific than the previous one. The previous layer doens't specify the amount of motor's. We
+                            now have left motor en right motor and we can easily control them. Rob worked on the BLE for
+                            the robot. It can now advertise (tell other devices it can pair with bluetooth) and my phone
+                            can find it.</p>
+                        <p> I started working on the app. I tried doing it wit Kotlin but after some trying I decided
+                            I'm going to try something different. Android studio was really slow and Kotlin was kinda
+                            complicated. I knew another language that I've tried before: Dart. Dart has the flutter
+                            framework where you can make apps really quick that you could run on Android, IOS, Widows,
+                            MacOS, Linux and on the web. Yes it is a multiplatfrom software language. I already did the
+                            setup once on my computer. I just had to update some things (which was really easy) and then
+                            I could start developing. I tried to make the app layout myself by using some help of the
+                            well documented Flutter website. The app has 2 sliders: 1 on each side to control each
+                            motor.</p>
+                        <p>The next step was to make it so you could connect with bluetooth. I followed a tutorial from
+                            an Indian guy who explained how to connect to bluetooth. The nice thing about flutter is
+                            that you can use your phone as a test bench. I tried it out and... It crashed :(. It was
+                            getting pretty late so I couldn't do more testing.</p>
+                        <p>The nice thing about flutter is that you have hot reload. This means that if you change
+                            something in the code, then it will be applied in the test app on your phone without having
+                            to rebuild the app and wait minutes to finish. But if the app chrashes then you have to
+                            rebuild the app constantly. This is why it took so long.
+                        <p>
+                        <p>So when I was at home I tried the app again. And it worked! So why does it not work at work
+                            but it does at home. Well... That is the most interesting part. The app has a scan button,
+                            once pressed it will search for bluetooth devices. When I press the search button it shows
+                            me all available bluetooth networks in range. But my robot controller (with the bluetooth)
+                            was not plugged in and the app ran fine. When I plugged it in but it wasn't pairing (Rob
+                            installed a button that you have to press on the controller to start advertising). The
+                            moment I pressed the pair button and I scanned again on my phone the app crashed. I don't
+                            know why the bluetooth connection of the controller crashes the app. That is what we have to
+                            find out on monday!</p>
                         <h3>Quick recap</h3>
-                        <p>I learned working with unit testing, clean code, C++ development, Flutter development and agile software.</p>
+                        <p>I learned working with unit testing, clean code, C++ development, Flutter development and
+                            agile software.</p>
                     </article>
                     <line style="background-color: aqua; height: 5px;"></line>
                 </div>
             </div>
 
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">Over the half way mark</h1>
+                    <h3><i>13/11/2023</i></h3>
+                    <article>
+                        <p>
+                            So we confirmed that the wrong bluetooth setup on the board was indeed the reason of the
+                            crashing. I tried making it so that wouldn't happend again. This was unfortunatly not
+                            possible because it came directly from android and not from flutter. Nonetheless it worked
+                            as far as I knew. The next part was fusing the code that sends the data to the motors and
+                            the the code that porcesses the data received from the BLE.
+                        </p>
+                        <p>
+                            We did some peer programming to better understand the code and the things we wrote. Rob
+                            could help me with any questions easily. He also showed me the principle of a state machine:
+                        </p>
+                        <blockquote>
+                            This is a way of coding and it splits the code into different parts that can switch from one
+                            part to the other. Not every part can switch to every other part and the parts may be aware
+                            of their state.<br>
+                            <strong>The best way of explaining is cooking fries (own example :) )</strong><br>
+                            the different parts
+                            <ul>
+                                <li>Starting the deepfryer</li>
+                                <li>Frying Fries</li>
+                                <li>Frying frikandellen</li>
+                                <li>eating fries</li>
+                                <li>eating frikandellen</li>
+                                <li>baking more</li>
+                            </ul>
+                            here is the schematic:<br><br>
+                            <img src="/pictures/statemachineexample.png" style="background-color: aliceblue;"> <br><br>
+                            So lets say you want to eat fries. To accomplish this you first have to start the deepfryer,
+                            bake the fries and then you can eat them. You can't go directly to eating, you can't go from
+                            eating fries to eating frikandellen, you can't start the deepfryer after you fry the fries,
+                            etc...<br>
+                        </blockquote>
+                        <p>We also used it in the program. It made the code 10 times longer but also 10 times easier to
+                            read.</p>
+                        <p>Rob worked on the magic BLE stuff while I continued working on the app. It can find the ble
+                            robot and isolate it from the rest. This is easier for the user to see what to connect to
+                        </p>
+                        <p>That was it for today!</p>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
+
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">Well... A longer tuesday</h1>
+                    <h3><i>14/11/2023</i></h3>
+                    <article>
+                        <p>The day started with reflecting on what we did yesterday. I showed what I did with the app at
+                            home and we tried it out. The idea I had was to isolate the BLE robot from the rest (place
+                            it on top of the rest) but Rob said: what if you have more controllers. Well... That was a
+                            good question, so I started working on that.
+                        </p>
+                        <p>I spent a good part of my day on the layout of the app. But what is the app without
+                            functionality? <strong>Nothing!</strong> I had to make connection with the board using the app. This didn't
+                            worked at the start (of course!). Rob put a lot of security on the board that prevented my
+                            phone from connecting. I also did some things wrong with the code so we had to fix it.</p>
+                        <p>The next task was writing data to the board. This was a complicated task. It used a whole
+                            coding of characters that I had to perfectly match to write data. After a lot of trying I
+                            made it to work. This was already after 5pm. Mike had a meeting until 6 so we had 1 hour of
+                            extra work time. The problem was that you could write data to the robot without it sending
+                            data back. This was not the default setting on the Bluetooth library in the app. It was
+                            something I had overlooked. Luckily it worked after this tiny error. We made the robot motors succesfully rotate with my phone.</p>
+                            <p>Tomorrow I'll work on writing data with the robot control interface and tidying up the app.</p>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
             <!-- blog template -->
             <!-- <div class="blog">
                 <div class="blog_block">
