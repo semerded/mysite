@@ -54,6 +54,10 @@ strong {
 }
 
 #go_to_blog_start a {
+    color: aqua;
+}
+
+#go_to_blog_start a:hover {
     color: red;
 }
 
@@ -62,4 +66,14 @@ strong {
         width: calc((100vw - 5vw));
     
     }
+}
+
+a h1 {
+    color: aqua;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+a h1:hover {
+    text-decoration-color: aqua;
 }

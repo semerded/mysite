@@ -36,9 +36,7 @@
                     <a title="official website"
                         href="https://www.philips.com/a-w/about/innovation/innovation-hubs/eindhoven.html"
                         style="text-decoration: none;">
-                        <h1 style="color: white; text-decoration: underline; text-decoration-color: aqua;">Koninklijke
-                            <strong
-                                style="color: aqua; text-decoration: underline; text-decoration-color: white;">Philips</strong>
+                        <h1>Koninklijke Philips
                         </h1>
                     </a>
                     <h4>In Eindhoven</h4>
@@ -373,7 +371,8 @@
                                 <li>baking more</li>
                             </ul>
                             here is the schematic:<br><br>
-                            <img src="/pictures/statemachineexample.png" style="background-color: aliceblue;"> <br><br>
+                            <img src="/pictures/statemachineexample.png" alt="state machine example"
+                                style="background-color: aliceblue;"> <br><br>
                             So lets say you want to eat fries. To accomplish this you first have to start the deepfryer,
                             bake the fries and then you can eat them. You can't go directly to eating, you can't go from
                             eating fries to eating frikandellen, you can't start the deepfryer after you fry the fries,
@@ -420,11 +419,34 @@
                     <line style="background-color: aqua; height: 5px;"></line>
                 </div>
             </div>
+
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">Wednesday</h1>
+                    <h3><i>15/11/2023</i></h3>
+                    <article>
+                        <p>The day started with connecting the bluetooth screen to the control screen. I just finished
+                            it in time for the daily standup (where we talk about what we did the previous day and what
+                            we will do today). Almost everyone was in the office and so we gathered around a desk to
+                            discuss. After that I went back to work.<br>I spent a good part of the day figuring out how
+                            to send data with the sliders.
+                            And after a lot of trying it finally worked. The UI lagged a lot so I had to fix that.
+                        </p>
+                        <img src="/pictures/uithursday.jpg" alt="ui of the app" style="width: 100%;">
+                        <figcaption>The UI of the app with 2 sliders, 1 for each motor and a button to switch to the
+                            bluetooth screen</figcaption>
+                        <p>After fixing most of the lag if found a bug. If you swipe really fast up and let go of the slider than the slider will return to 0 (as it should) but the motor keeps spinning. I have to fix that tomorrow (I spent too much time already fixing that bug). I had a nice discussion with Mike about how I should tackle this problem.</p>
+                        <h3>But that is a problem for tomorrow!</h3>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
+
             <!-- blog template -->
             <!-- <div class="blog">
                 <div class="blog_block">
                     <h1 style="color: aqua;">Title</h1>
-                    <h3><i>23/11/2023</i></h3>
+                    <h3><i>16/11/2023</i></h3>
                     <article>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi enim omnis tempore tenetur dolorem cupiditate, voluptas molestiae nesciunt, minima saepe dignissimos mollitia placeat nam, libero earum dicta unde officiis.
                         Ipsam nobis ullam soluta minus atque laudantium unde, quibusdam labore in sequi sunt quo eveniet dolores! Repudiandae laboriosam placeat neque itaque soluta est inventore iusto quaerat et, non fugiat similique!
