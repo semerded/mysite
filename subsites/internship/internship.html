@@ -48,7 +48,7 @@
                 <figcaption><i>The test board that was used</i></figcaption><br>
                 <p>The team that I'll be visiting during my internship will be the connectivity group. They make the
                     connections between the (Philips) devices and your mobile phone/the cloud. They make this ranging
-                    from toothbrushes to vacuum cleaners to lightbulbs</p>
+                    from toothbrushes to airfyers to connected medical devices</p>
             </div>
 
             <line style="background-color: aqua;" id="blog_start"></line>
@@ -62,7 +62,7 @@
                             managed to do it. Here is my story.
                         </p>
                         <p>
-                            I had to work with Docker to set up a virtual environment. I had to follow a step by step
+                            I worked with Docker to set up a virtual environment. I followed a step by step
                             guide provided by my internship leader. The next step was to clone a GitHub repository with
                             all the data to make projects with the test board. This took ages to clone so I took a
                             little
@@ -141,7 +141,7 @@
                             have
                             created for the test board. After some trail and error we finally managed to do it. We tried
                             the debug led and it worked! Then I learned how to print info to the boards terminal. I
-                            couldn't just access it on my computer. I had to download a special program that
+                            couldn't just access it on my computer. I had to download a serial terminal application that
                             communicates with the board to read it's datalines. To make it simple:
                         <blockquote style="text-align: center;"><i>"I write data from my computer to a testboard with a
                                 program to then read the data from the testboard to my computer with a program"</i>
@@ -228,8 +228,8 @@
                                 alt="https://upload.wikimedia.org/wikipedia/commons/b/b8/Duty_Cycle_Examples.png"
                                 style="width: 100%;">
                         </div>
-                        <p>Rob also showed me how they build software in 3 layers which is a unique experience for me.
-                            Then we worked on the PWM code. We couldn't test this code with the unit tests because this
+                        <p>Rob also showed me how they build software in the test pyramid which is a unique experience for me.
+                            Then we worked on the PWM code. It is a lot of work to test this code with the unit tests because this
                             is directly based on the clock of the board itself. We finished it and put a general code in
                             the <strong>Main.cpp</strong>. We hooked it up to the robot and... Nothing! After some
                             checking we found out that we missed a part of the code that we had to copy (rookie
@@ -303,7 +303,7 @@
                         <p>I started with another layer on the code for the robot. This code was a little bit more
                             specific than the previous one. The previous layer doens't specify the amount of motor's. We
                             now have left motor en right motor and we can easily control them. Rob worked on the BLE for
-                            the robot. It can now advertise (tell other devices it can pair with bluetooth) and my phone
+                            the robot. It can now advertise (make itself known to other BLE devices that it is available on the network) and my phone
                             can find it.</p>
                         <p> I started working on the app. I tried doing it wit Kotlin but after some trying I decided
                             I'm going to try something different. Android studio was really slow and Kotlin was kinda
@@ -333,8 +333,8 @@
                             know why the bluetooth connection of the controller crashes the app. That is what we have to
                             find out on monday!</p>
                         <h3>Quick recap</h3>
-                        <p>I learned working with unit testing, clean code, C++ development, Flutter development and
-                            agile software.</p>
+                        <p>I learned working with unit testing, clean code, C++ development, Flutter development, test driven development, SOLID principles, red green refactor, pair programming and
+                            agile way of working.</p>
                     </article>
                     <line style="background-color: aqua; height: 5px;"></line>
                 </div>
@@ -353,8 +353,8 @@
                             the the code that porcesses the data received from the BLE.
                         </p>
                         <p>
-                            We did some peer programming to better understand the code and the things we wrote. Rob
-                            could help me with any questions easily. He also showed me the principle of a state machine:
+                            We did some pair programming to better understand the code and the things we wrote. Rob
+                            could help me with any questions easily. He also showed me the principle of a state machine (a design pattern):
                         </p>
                         <blockquote>
                             This is a way of coding and it splits the code into different parts that can switch from one
@@ -426,7 +426,7 @@
                     <h3><i>15/11/2023</i></h3>
                     <article>
                         <p>The day started with connecting the bluetooth screen to the control screen. I just finished
-                            it in time for the daily standup (where we talk about what we did the previous day and what
+                            it in time for the daily standup (a part of the agile way of working where we talk about what we did the previous day and what
                             we will do today). Almost everyone was in the office and so we gathered around a desk to
                             discuss. After that I went back to work.<br>I spent a good part of the day figuring out how
                             to send data with the sliders.
