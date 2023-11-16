@@ -131,7 +131,9 @@
                             of the team where I'll do my internship gives me a ride to Eindhoven. I'm befriended with
                             his daughter and because of them I can do an internship at Philips. Big thanks to Amy and
                             Mike! Mike is awesome and it was a fun ride to Eindhoven. He also has a cool car! The
-                            Philips was big! We took some tea and went to his office. He explained how the team works
+                            Philips building was big! It is situated in the High-Tech-Campus. An area with a lot of
+                            major tech companies. We took some tea and went to his office. He explained how the team
+                            works
                             and what they do.</p>
                         <p>
                             I was introduced to my internship leader Rob. He was the only one in the office. The rest of
@@ -228,8 +230,10 @@
                                 alt="https://upload.wikimedia.org/wikipedia/commons/b/b8/Duty_Cycle_Examples.png"
                                 style="width: 100%;">
                         </div>
-                        <p>Rob also showed me how they build software in the test pyramid which is a unique experience for me.
-                            Then we worked on the PWM code. It is a lot of work to test this code with the unit tests because this
+                        <p>Rob also showed me how they build software in the test pyramid which is a unique experience
+                            for me.
+                            Then we worked on the PWM code. It is a lot of work to test this code with the unit tests
+                            because this
                             is directly based on the clock of the board itself. We finished it and put a general code in
                             the <strong>Main.cpp</strong>. We hooked it up to the robot and... Nothing! After some
                             checking we found out that we missed a part of the code that we had to copy (rookie
@@ -303,7 +307,8 @@
                         <p>I started with another layer on the code for the robot. This code was a little bit more
                             specific than the previous one. The previous layer doens't specify the amount of motor's. We
                             now have left motor en right motor and we can easily control them. Rob worked on the BLE for
-                            the robot. It can now advertise (make itself known to other BLE devices that it is available on the network) and my phone
+                            the robot. It can now advertise (make itself known to other BLE devices that it is available
+                            on the network) and my phone
                             can find it.</p>
                         <p> I started working on the app. I tried doing it wit Kotlin but after some trying I decided
                             I'm going to try something different. Android studio was really slow and Kotlin was kinda
@@ -333,7 +338,8 @@
                             know why the bluetooth connection of the controller crashes the app. That is what we have to
                             find out on monday!</p>
                         <h3>Quick recap</h3>
-                        <p>I learned working with unit testing, clean code, C++ development, Flutter development, test driven development, SOLID principles, red green refactor, pair programming and
+                        <p>I learned working with unit testing, clean code, C++ development, Flutter development, test
+                            driven development, SOLID principles, red green refactor, pair programming and
                             agile way of working.</p>
                     </article>
                     <line style="background-color: aqua; height: 5px;"></line>
@@ -354,7 +360,8 @@
                         </p>
                         <p>
                             We did some pair programming to better understand the code and the things we wrote. Rob
-                            could help me with any questions easily. He also showed me the principle of a state machine (a design pattern):
+                            could help me with any questions easily. He also showed me the principle of a state machine
+                            (a design pattern):
                         </p>
                         <blockquote>
                             This is a way of coding and it splits the code into different parts that can switch from one
@@ -426,7 +433,8 @@
                     <h3><i>15/11/2023</i></h3>
                     <article>
                         <p>The day started with connecting the bluetooth screen to the control screen. I just finished
-                            it in time for the daily standup (a part of the agile way of working where we talk about what we did the previous day and what
+                            it in time for the daily standup (a part of the agile way of working where we talk about
+                            what we did the previous day and what
                             we will do today). Almost everyone was in the office and so we gathered around a desk to
                             discuss. After that I went back to work.<br>I spent a good part of the day figuring out how
                             to send data with the sliders.
@@ -435,8 +443,54 @@
                         <img src="/pictures/uithursday.jpg" alt="ui of the app" style="width: 100%;">
                         <figcaption>The UI of the app with 2 sliders, 1 for each motor and a button to switch to the
                             bluetooth screen</figcaption>
-                        <p>After fixing most of the lag if found a bug. If you swipe really fast up and let go of the slider than the slider will return to 0 (as it should) but the motor keeps spinning. I have to fix that tomorrow (I spent too much time already fixing that bug). I had a nice discussion with Mike about how I should tackle this problem.</p>
+                        <p>After fixing most of the lag if found a bug. If you swipe really fast up and let go of the
+                            slider than the slider will return to 0 (as it should) but the motor keeps spinning. I have
+                            to fix that tomorrow (I spent too much time already fixing that bug). I had a nice
+                            discussion with Mike about how I should tackle this problem.</p>
                         <h3>But that is a problem for tomorrow!</h3>
+                    </article>
+                    <line style="background-color: aqua; height: 5px;"></line>
+                </div>
+            </div>
+
+            <div class="blog">
+                <div class="blog_block">
+                    <h1 style="color: aqua;">First showcase of the project</h1>
+                    <h3><i>16/11/2023</i></h3>
+                    <article>
+                        <p>
+                            I had to fix the small bug. I just had to. But everything I tried didn't work. For context:
+                            the robot sometimes doesn't receive the data send from my phone. And there is a good reason
+                            for it. It has to do with the characteristics. The robot has 6 characteristics:</p>
+                        <ul>
+                            <li>speed motor left</li>
+                            <li>direction motor left</li>
+                            <li>speed motor right</li>
+                            <li>direction motor right</li>
+                            <li>stop (which I've never used)</li>
+                            <li>acknowledge (write to the phone that the data has been processed)</li>
+                        </ul>
+                        <p>It can only send one thing at a time until it has received an acknowledge back. You see the
+                            problem here? Lets say you want the robot to drive forwards: It sends "speed motor left
+                            100%" and waits until is has been acknowledged. Then it will write "direction motor left
+                            forwards" and waits for an acknowledge...<br>The same for the right motor. So it has to send
+                            4 different messages to the robot before it can start driving. And these messages aren't
+                            instant. So If you change something really quick then it wont register everything. And I
+                            can't just add a waiting queue because that will stack up a lot of messages and the robot
+                            won't react to your inputs instantly.</p>
+                        <p>I tried fixing this with a lot of safety procedures. This just makes the program slow. I
+                            tried fixing this before 3pm and I made a version that was for 90% stable (if you drive
+                            careful).</p>
+                        <p>Why 3pm? I had a showcase for the whole team. And even members that weren't directly part of
+                            the embeded team. Half of them followed online and the rest in the office. I told about what
+                            I had learned the past 2* weeks. I also showed them the robot with a little drive around the
+                            workfloor. They said it was impressive what I had accomplished in these 2 weeks. I will
+                            never learn the things I learned here in school and this is valueable knowledge to take with
+                            me on my career of software engeneering!</p>
+                        <h1 style="font-size: xx-large; text-align: center;"><strong>Thank you to everyone who followed my presentation!</strong></h1>
+                        <p>It was also good practice because I did the whole presentation in english.</p>
+                        <p>The last thing I wanted to do today was fixing the app and the robot. I had the idea to only make 2 characteristics: send data and acknowledge. In the send data characteristics I would send the speed and direction of both motors. This means it only needs 1 message to drive forward instead of 4. Rob changed the characteristics while I rebuild the app. I wanted 2 tabs in the bluetooth finder. 1 with only the robot connections and the other one with all bluetooth connections. That would be way easier for the customer to understand. I also made an info screen in case the robot wouldn't connect.</p>
+                        <p>I'm still working on it! Also my teacher will visit the office tomorrow. Until then!</p>
                     </article>
                     <line style="background-color: aqua; height: 5px;"></line>
                 </div>
@@ -446,7 +500,7 @@
             <!-- <div class="blog">
                 <div class="blog_block">
                     <h1 style="color: aqua;">Title</h1>
-                    <h3><i>16/11/2023</i></h3>
+                    <h3><i>17/11/2023</i></h3>
                     <article>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi enim omnis tempore tenetur dolorem cupiditate, voluptas molestiae nesciunt, minima saepe dignissimos mollitia placeat nam, libero earum dicta unde officiis.
                         Ipsam nobis ullam soluta minus atque laudantium unde, quibusdam labore in sequi sunt quo eveniet dolores! Repudiandae laboriosam placeat neque itaque soluta est inventore iusto quaerat et, non fugiat similique!
