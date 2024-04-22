@@ -1,0 +1,68 @@
+#titleRoleWrapper {
+    display: flex;
+    color: white;
+    background-color: var(--primary);
+    padding-left: 5vw;
+}
+
+@media (max-width: 500px) {
+    #titleRoleWrapper {
+        transition: 0ms;
+        font-size: 3.2vw;
+    }
+}
+
+article {
+    display: grid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+blog-listing {
+    grid-column: 1;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+aside {
+    grid-column: 2;
+    width: 30vw;
+    left: 70vw;
+    transition: 0ms;
+    position: fixed;
+}
+
+@media (max-width: 800px) {
+    article {
+        display: block;
+    }
+    aside {
+        left: 0px;
+    }
+}
+
+blog {
+    width: 80%;
+    border: 3px solid var(--box);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* blog > div:has(img) {
+    display: flex;
+    justify-content: end;
+} */
+
+blog > img {
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+}

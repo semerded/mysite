@@ -1,0 +1,176 @@
+aboutme {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--ligth);
+
+}
+
+main .titleName {
+    font-size: 4vw;
+}
+
+main {
+    color: black;
+}
+
+p {
+    color: black;
+    text-align: center;
+}
+
+description, image_me {
+    width: 49vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-row: 1;
+}
+
+image_me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+description {
+    background-color: var(--box) !important;
+}
+
+aboutme:nth-child(odd) > description{
+    grid-column: 2;
+}
+
+aboutme:nth-child(odd) > image_me{
+    grid-column: 1;
+}
+
+aboutme p {
+    font-size: 20px;
+    text-align: left; 
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+aboutme h3 {
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+aboutme li {
+    margin-left: 10%;
+    margin-right: 10%;
+
+    font-size: 20px;
+}
+
+aboutme li::marker {
+    color: var(--primary);
+}
+
+description:has(div) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+description > div > button {
+    width: 80%;
+    height: 50px;
+    background-color: var(--primary);
+    font-weight: 500;
+    font-size: larger;
+
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+description > div:has(button) {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+image_me img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    
+    aspect-ratio: 1 / 1;
+    border: 10px solid var(--secondary);
+    border-radius: 20px;
+    object-fit: cover;
+    
+}
+
+@media (max-width: 1000px) {
+    aboutme {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    description, image_me {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .titleName {
+        font-size: 8vw !important;
+    }
+
+        
+}
+
+#what_can_i_do {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#what_can_i_do > div:has(ul) {
+    width: 50vw;
+    font-size: 30px;
+}
+
+#contact_me_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#contact_me_button {
+    width: 50%;
+    background-color: var(--secondary);
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
+
+roadmap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+roadmap > item {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+roadmap > item > description {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}

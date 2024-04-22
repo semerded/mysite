@@ -1,0 +1,60 @@
+<div class="fixed">
+    <nav>
+        <link rel="stylesheet" type="text/css" href="/vars.css"> <!-- automaticly loaded in other files -->
+        <link rel="stylesheet" type="text/css" href="/mainstyle.css">
+        <link rel="stylesheet" type="text/css" href="/header/navbar.css" />
+        <link rel="stylesheet" type="text/css" href="/header/hamburgerMenu.css">
+        <div id="nav">
+            <!-- hamburger button (only visible on mobile) -->
+            <div id="hamburgerButton">
+                <input type="checkbox" id="hamburgerCheckBox" class="hamburgerCheckBox visuallyHidden" onclick="if (document.getElementById('hamburgerCheckBox').checked) {
+                document.getElementById('mobileMenuWrapper').style.display = 'flex'; 
+                document.body.style.height = '100%';
+                document.body.style.overflowY = 'hidden';
+            } else {
+                document.getElementById('mobileMenuWrapper').style.display = 'none'; 
+                document.body.style.height = '';
+                document.body.style.overflowY = '';
+            };">
+                <label for="hamburgerCheckBox" style="cursor: pointer;">
+                    <div class="hamburger hamburger4">
+                        <span class="bar bar1"></span>
+                        <span class="bar bar2"></span>
+                        <span class="bar bar3"></span>
+                        <span class="bar bar4"></span>
+                        <span class="bar bar5"></span>
+                    </div>
+                </label>
+            </div>
+
+            <!-- navbar -->
+            <div id="nav_logo">
+                <a href="/index.html" id="navButton_Home"><img id="logo" src="/header/logo.png"
+                        class="unselectable"></a>
+            </div>
+            <div id="nav_links" class="unselectable">
+                <a href="/pages/aboutme.html" id="navButton_aboutme" class="navButton">About
+                    Me</a>
+                <a href="/pages/projects.html" id="navButton_projects" class="navButton">My
+                    Projects</a>
+                <a href="/pages/blog_redirect.html" class="navButton" id="navButton_blog">Blog</a>
+                <a href="/pages/contact.html" id="navButton_contact" class="navButton">Contact</a>
+            </div>
+            <div id="hamburgerFill"></div>
+        </div>
+        <div id="progress_bar_background" onclick="changeProgressBarColor()"></div>
+        <div id="progress_bar_main"></div>
+
+        <div id="hamburgerMenu" class="unselectable"></div>
+
+    </nav>
+    <div id="mobileMenuWrapper">
+        <div id="mobileMenu">
+            <a href="/index.html">Home</a>
+            <a href="/pages/aboutme.html">About Me</a>
+            <a href="/pages/projects.html">Projects</a>
+            <a href="/pages/blog_redirect.html">Blog</a>
+            <a href="/pages/contact.html">Contact</a>
+        </div>
+    </div>
+</div>

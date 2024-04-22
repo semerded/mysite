@@ -1,0 +1,7 @@
+python
+with open("_codeEncapsulator/paste_text_here.txt") as txt:
+    text = txt.read()
+    
+for line in text.split("\n"):
+    for word in line.split(" "):
+        print(word)

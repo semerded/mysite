@@ -1,32 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sem Van Broekhoven</title>
-    <link rel="stylesheet" type="text/css" href="/footer/footer.css">
-</head>
+<link rel="stylesheet" type="text/css" href="/footer/footer.css">
+<style>
+    @font-face {
+        font-family: Quish;
+        src: url("/fonts/Quish.otf");
+    }
+</style>
 
 <body onload="timeInBelgium()">
-    <div id="footer_main">
-        <div class="column1">
-            <h2>Check Out The Other Pages!</h2>
-            <menu>
-                <p><a href="/index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;The Home Page!</p>
-                <p><a href="/subsites/aboutme/aboutme.html">About Me</a>&nbsp;&nbsp;&nbsp;&nbsp;More Info About Me</p>
-                <p><a href="/subsites/codes/codes.html">Projects</a>&nbsp;&nbsp;&nbsp;&nbsp;Some Projects I've Made</p>
-                <p><a href="/subsites/internship/internship.html">Internship</a>&nbsp;&nbsp;&nbsp;&nbsp;A Blog About My
-                    Internship</p>
-            </menu>
-        </div>
-        <div class="column2">
-            <h2>A website made by myself!</h2>
-            <blockquote>Sem Van Broekhoven</blockquote>
-            <h1>Made With Love In Belgium</h1>
-            <div id="time_in_belgium"></div>
-        </div>
-    </div>
-</body>
+    <div id="footer_body">
+        <main id="footer_main">
+            <div id="footer_links" class="unselectable">
+                <!-- home page (logo)-->
+                <div>
+                    <img src="/favicon.png" id="footer_logo" class="unselectable" onclick="location.href = '/index.html'">
+                </div>
 
-</html>
+                <!-- about me-->
+                <div>
+                    <a href="/pages/aboutme.html">About Me</a>
+                    <br>
+                    <a href="/pages/aboutme.html#what_can_i_do">What can I do</a>
+                    <a href="/pages/aboutme.html#roadmap">My ICT Roadmap</a>
+
+                    <a href="/pages/sub/dogpictures.html">Dog Pictures</a>
+                </div>
+
+                <!-- projects -->
+                <div>
+                    <a href="/pages/projects.html">My Projects</a>
+                    <br>
+                    <a>gFrame</a>
+                    <a>RPI led controller</a>
+                    <a>Web Design</a>
+                    <a>Final Projects</a>
+                </div>
+
+                <!-- blog -->
+                <div>
+                    <a href="/pages/blog_redirect.html">Blog</a>
+                    <br>
+                    <a href="/blogs/intership/philips/internship.html">Internship Philips</a>
+                    <a>3D printer</a>
+                    <a>VEX: to the states</a>
+                    <a>gFrame</a>
+                </div>
+
+                <!-- contact me -->
+                <div>
+                    <a href="/pages/contactme.html">Contact Me</a>
+                    <br>
+                    <a>email</a>
+                    <a href="https://github.com/semerded" target="_blank">Github</a>
+                    <a href="https://www.linkedin.com/in/sem-van-broekhoven-b4532a2a3/" target="_blank">LinkedIn</a>
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <h1 id="footer_qoute" class="unselectable">"Programmer = Googling + Coffee²"</h1>
+            <div id="footnote">
+                <div id="time_in_belgium" class="unselectable"></div>
+                <div>&copy; 2023 - 2024 | site made by myself</div>
+            </div>
+        </main>
+    </div>

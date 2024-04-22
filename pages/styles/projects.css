@@ -1,0 +1,160 @@
+article {
+    display: flex;
+}
+
+aside {
+    width: 20vw;
+    position: fixed;
+}
+
+#project_wrapper {
+    margin-left: 20vw;
+    width: 80vw;
+}
+
+.projectName {
+    text-align: center;
+    font-size: 6vw;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.powertext {
+    text-align: center;
+    color: var(--primary);
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+project {
+    background-color: var(--box);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid var(--box);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+project img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+
+    object-fit: contain;
+}
+
+project h1 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+project button {
+    margin: 10px;
+    height: 40px;
+    border: 2px solid var(--dark);
+    background-color: var(--primary);
+    width: 130px;
+}
+
+project div:has(> button) {
+    display: flex;
+    flex-wrap: wrap;
+}
+project p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* project tags */
+tags {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+tags > * {
+    width: auto;
+    height: auto;
+    padding: 3px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    border: 2px solid var(--dark);
+    border-radius: 5px;
+    /* font-weight: bold; */
+}
+
+flutter {
+    background: linear-gradient(90deg, rgba(71,196,250,1) 0%, rgba(0,181,248,1) 49%, rgba(0,85,158,1) 100%);
+}
+flutter:before {
+    content: "flutter";
+}
+
+python {
+    background: linear-gradient(90deg, rgba(255,222,87,1) 0%, rgba(69,132,182,1) 100%);
+}
+python:before {
+    content: "python";
+}
+
+library {
+    background-color: antiquewhite;
+}
+library::before {
+    content: "library";
+}
+
+gframe {
+    background-color: greenyellow;
+}
+gframe::before {
+    content: "gFrame";
+}
+
+java {
+    background-color: red;
+}
+java::before {
+    content: "Java";
+}
+
+cpp {
+    background-color: rgb(197, 0, 197);
+}
+cpp::before {
+    content: "C++";
+}
+
+web {
+    background-color: orangered;
+}
+web::before {
+    content: "HTML/CSS";
+}
+
+javascript {
+    background-color: yellow;
+}
+javascript::before {
+    content: "JavaScript";
+}
+
+game {
+    background-color: rgb(0, 255, 0);
+}
+game::before {
+    content: "game";
+}
+
+
+

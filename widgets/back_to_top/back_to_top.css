@@ -1,0 +1,52 @@
+.back_to_top {
+    position: fixed;
+    display: none;
+    left: 10px;
+    top: calc(100vh - 50px);
+    text-align: center;
+    cursor: pointer;
+
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid black;
+    
+    background-image: url(/pictures/_icons/arrows.svg);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: var(--primary);
+
+    animation: show_back_to_top_button 800ms forwards;
+}
+
+.hide_back_to_top_button {
+    animation: hide_back_to_top_button 800ms forwards;
+}
+
+@keyframes show_back_to_top_button {
+    0% {
+        transform: rotateZ(180deg) rotateX(90deg) rotateY(90deg);
+    }
+
+    50% {
+        transform: rotateZ(180deg) rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes hide_back_to_top_button {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(180deg) rotateX(0deg) rotateY(0deg);
+    } 
+    100% {
+        transform: rotateZ(180deg) rotateX(90deg) rotateY(90deg)
+    }
+}

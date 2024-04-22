@@ -1,0 +1,160 @@
+#logo {
+    height: 50px;
+}
+
+.fixed {
+    position: fixed;
+
+}
+
+nav {
+    text-align: center;
+    display: block;
+    width: 100vw;
+    margin-top: -10px;
+    background-color: var(--black);
+}
+
+#nav {
+    display: flex;
+    width: 100vw;
+}
+
+#navButton_Home {
+    width: 30vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(--black);
+    border: 0;
+}
+
+#nav_links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 95%;
+    margin-right: 12px;
+}
+
+.navButton,
+.navButton_active {
+    text-align: center;
+    font: normal 120% 'century gothic';
+    font-weight: bold;
+    color: var(--secondary);
+    background-color: var(--black);
+    border: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.navButton_active {
+    text-decoration: underline;
+}
+
+nav:has(.navButton:hover) .navButton:not(:hover) {
+    color: gray;
+}
+
+#hamburgerButton {
+    margin-left: 15px;
+    align-self: center;
+    display: none;
+}
+
+#hamburgerFill {
+    display: none;
+    margin-right: 15px;
+    width: 30px;
+}
+
+#progress_bar_main {
+    transition: 0ms;
+    position: fixed;
+    margin-top: -10px;
+    height: 0px;
+    box-shadow: 0 0 10px 8px var(--secondary);
+}
+
+#progress_bar_background {
+    margin-top: -20px;
+    width: 100vw;
+    height: 40px;
+    background-color: var(--black);
+}
+
+/* mobile menu */
+#mobileMenuWrapper {
+    display: none;
+    width: 100vw;
+    height: calc(100vh - 74px);
+    justify-content: center;
+    align-items: center;
+    
+    animation: blur_background 1s linear forwards;
+}
+
+@keyframes blur_background {
+    0% {
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+
+    25% {
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+    }
+
+    50% {
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+    }
+
+    100% {
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+    }
+}
+
+#mobileMenu {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    width: 50vw;
+    height: 50vh;
+    border: 3px solid var(--secondary);
+    border-radius: 30px;
+
+    animation: flipCard 1s forwards;
+}
+
+@keyframes flipCard {
+    0% {
+        transform: rotateZ(90deg)  rotateX(90deg);
+    }
+    100% {
+        transform: rotateZ(0deg) rotateX(0deg);
+    }
+}
+
+@media (max-width: 840px) {
+    #nav_links {
+        display: none;
+    }
+
+    #nav {
+        justify-content: space-between;
+    }
+
+    #hamburgerButton {
+        display: block;
+    }
+
+    #hamburgerFill {
+        display: block;
+    }
+
+}

@@ -1,0 +1,14 @@
+#dog_collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+#dog_collage img {
+    max-width: 400px;
+    min-width: 200px;
+    height: 100%;
+    margin: 20px;
+    border-radius: 40px;
+    border: 4px solid var(--secondary);
+}

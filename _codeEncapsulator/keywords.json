@@ -1,0 +1,17 @@
+{
+    "colors": {
+        "syntax": "#00FFFF"
+    },
+    "keywords": {
+        "syntax": [
+            "class",
+            "in",
+            "if",
+            "elif",
+            "else",
+            "for",
+            "except",
+            ""
+        ]
+    }
+}

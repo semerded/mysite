@@ -1,0 +1,30 @@
+main {
+    display: flex;
+    align-items: center;
+}
+article {
+
+    width: 50vw;
+}
+
+line {
+    background-color: var(--secondary) !important;
+}
+
+h1 {
+    color: var(--primary);
+}
+
+#go_to_blog_start {
+    text-align: center;
+}
+
+#place_of_internship {
+    text-align: center;
+    color: var(--primary);
+}
+
+#place_of_internship > h1 > a {
+    color: var(--primary);
+    text-decoration-color: var(--secondary);
+}

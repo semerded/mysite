@@ -11,6 +11,7 @@ function stableNumbers(unitToCheck) {
   };
   return unitToCheck;
 }
+
 function timeInBelgium() {
   const dateTime = new Date();
   let hours = dateTime.getHours();
@@ -32,6 +33,6 @@ function timeInBelgium() {
 
   setTimeout(() => {
     timeInBelgium()
-  }, 100);
+  }, 400);
 }
 timeInBelgium()
