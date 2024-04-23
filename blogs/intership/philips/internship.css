@@ -1,10 +1,17 @@
 main {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 article {
 
     width: 50vw;
+}
+
+@media (max-width: 900px) {
+    article {
+        width: 95vw;
+    }
 }
 
 line {
@@ -27,4 +34,9 @@ h1 {
 #place_of_internship > h1 > a {
     color: var(--primary);
     text-decoration-color: var(--secondary);
+}
+
+#board_img_wrapper {
+    display: flex;
+    justify-content: center;
 }
