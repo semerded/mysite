@@ -176,6 +176,11 @@ h3 {
         width: 100%;
     }
 
+    .mini_project_wrapper:hover {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .mini_project_name {
         font-size: 9vw;
     }
