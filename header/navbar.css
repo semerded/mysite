@@ -131,6 +131,11 @@ nav:has(.navButton:hover) .navButton:not(:hover) {
     animation: flipCard 1s forwards;
 }
 
+#mobileMenu > a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 @keyframes flipCard {
     0% {
         transform: rotateZ(90deg)  rotateX(90deg);

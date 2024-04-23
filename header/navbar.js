@@ -27,6 +27,15 @@ window.onscroll = function () {
     document.getElementById("progress_bar_main").style.width = width + "vw";
 }
 
+window.onresize = function () {
+    if (document.getElementById("mobileMenuWrapper").style.display == "flex" && document.body.clientWidth > 840) {
+        document.getElementById("mobileMenuWrapper").style.display = "none";
+        document.body.style.height = '';
+        document.body.style.overflowY = '';
+        document.getElementById('hamburgerCheckBox').checked = false;
+    }
+}
+
 var progressBarColor = localStorage.getItem("progress_bar_prefered_color");
 if (progressBarColor == null) {
     progressBarColor = "secondary"
