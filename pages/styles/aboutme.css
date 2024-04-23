@@ -137,6 +137,12 @@ image_me img{
     font-size: 30px;
 }
 
+@media (max-width: 1000px) {
+    #what_can_i_do > div:has(ul) {
+        width: 95vw;
+    }
+}
+
 #contact_me_container {
     display: flex;
     align-items: center;
@@ -146,7 +152,8 @@ image_me img{
 }
 
 #contact_me_button {
-    width: 50%;
+    width: 80%;
+    height: 40px;
     background-color: var(--secondary);
     padding: 5px;
     border: 3px solid black;
@@ -163,7 +170,8 @@ roadmap {
 }
 
 roadmap > item {
-    width: 400px;
+    width: 90vw;
+    max-width: 400px;
     height: 100px;
     display: flex;
     flex-direction: column;
