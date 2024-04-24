@@ -153,7 +153,7 @@ image_me img{
 
 #contact_me_button {
     width: 80%;
-    height: 40px;
+    height: 8vw;
     background-color: var(--secondary);
     padding: 5px;
     border: 3px solid black;
