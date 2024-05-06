@@ -5,7 +5,19 @@ fetch("/header/navbar.html")
     .then(data => {
         document.querySelector("navbar").innerHTML = data;
         document.getElementById("progress_bar_main").style.boxShadow = `0 0 10px 8px var(--${progressBarColor})`;
+        setActiveNavButton(getSyncScriptParams());
     });
+
+    function getSyncScriptParams() {
+        var scripts = document.getElementsByTagName('script');
+        console.log(scripts);
+        for (let index = 0; index < scripts.length; index++) {
+            let att = scripts[index].getAttribute('activeNavButton');
+            if (att != null) {
+                return att;
+            }
+        }
+}
 
 function setActiveNavButton(currentPage) {
     if (document.getElementById(currentPage) == null) {
