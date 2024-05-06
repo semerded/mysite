@@ -79,3 +79,7 @@ h1.dark {
 div.dark {
     background-color: var(--dark);
 }
+
+button {
+    cursor: pointer;
+}
