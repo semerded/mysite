@@ -10,7 +10,6 @@ fetch("/header/navbar.html")
 
     function getSyncScriptParams() {
         var scripts = document.getElementsByTagName('script');
-        console.log(scripts);
         for (let index = 0; index < scripts.length; index++) {
             let att = scripts[index].getAttribute('activeNavButton');
             if (att != null) {
