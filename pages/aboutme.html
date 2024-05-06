@@ -1,238 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- tab style -->
+        <title>SVB: about me</title>
+        <link rel="icon" type="image_me/x-icon" href="/favicon.png" />
 
-    <!-- tab style -->
-    <title>SVB: about me</title>
-    <link rel="icon" type="image_me/x-icon" href="/favicon.png">
+        <!-- header and footer -->
+        <script src="/header/navbar.js" activeNavButton="navButton_aboutme" defer></script>
+        <script src="/footer/footer.js" defer type="text/javascript"></script>
 
-    <!-- header and footer -->
-    <script src="/header/navbar.js" defer></script>
-    <script src="/footer/footer.js" defer type="text/javascript"></script>
+        <script src="/widgets/back_to_top/back_to_top.js"></script>
 
-    <script>setActiveNavButton("navButton_aboutme")</script>
-    <script src="/widgets/back_to_top/back_to_top.js"></script>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/pages/styles/aboutme.css" />
+    </head>
 
+    <body
+        onload="calculateTimeDiff('2006-08-31 6:22', 'time_since_birth'); calculateTimeDiff('2021-08-08 12:00', 'ageDoezel')">
+        <navbar
+            >javascript is not loaded correctly or disabled -> reload page or
+            enable javascript</navbar
+        >
+        <back-to-top></back-to-top>
+        <main>
+            <aboutme>
+                <description>
+                    <h1 class="titleName">Sem Van Broekhoven</h1>
+                    <p>
+                        A junior software developer who loves to learn
+                        everything about programming.
+                    </p>
+                    <p>
+                        Eager to learn all the little tricks to balance a
+                        program between clean and fast.
+                    </p>
+                    <p>Fascinated by clean code.</p>
+                    <p>
+                        Succesful
+                        <a href="/blogs/intership/philips/internship.html"
+                            >internship</a
+                        >
+                        at Philips Eindhoven
+                    </p>
+                    <p>
+                        Straight and logical thinker, everything can be solved
+                        with code!
+                    </p>
+                </description>
+                <image_me>
+                    <img src="/pictures/aboutme/me_guitar.JPG" />
+                </image_me>
+            </aboutme>
 
-    <link rel="stylesheet" type="text/css" href="/pages/styles/aboutme.css">
+            <aboutme>
+                <description>
+                    <h1 class="titleName">Who am I?</h1>
+                    <p>
+                        I'm a highschool student from Belgium studying
+                        Industrial IT
+                    </p>
+                    <p>I'm <span id="time_since_birth">17 years</span> old.</p>
+                    <h3>hobbies</h3>
+                    <ul>
+                        <li>competitive swimmer</li>
+                        <li>guitar player</li>
+                        <li>gamer and programmer</li>
+                        <li>scuba diver</li>
+                    </ul>
+                    <h3>Language knowledge</h3>
+                    <ul>
+                        <li>
+                            Dutch -
+                            <span style="color: var(--primary)"
+                                >Native language</span
+                            >
+                        </li>
+                        <li>
+                            English -
+                            <span style="color: var(--secondary)"
+                                >Fluently</span
+                            >
+                        </li>
+                        <li>
+                            French -
+                            <span style="color: var(--secondary)"
+                                >Moderate</span
+                            >
+                        </li>
+                    </ul>
+                </description>
+                <image_me>
+                    <img src="/pictures/aboutme/swimming.jpg" />
+                </image_me>
+            </aboutme>
 
+            <aboutme>
+                <description>
+                    <h1 class="titleName">Programming, Not just a hobby</h1>
+                    <p>
+                        My dream is to become a programmer. I'm still exploring
+                        what I like to do the most. If you have any projects for
+                        me, <a href="/pages/contact.html">contact me</a>! I'm
+                        always open to learn more.
+                    </p>
+                </description>
+                <image_me> </image_me>
+            </aboutme>
 
-</head>
+            <aboutme>
+                <description>
+                    <h1 class="titleName">Skills and Experience</h1>
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Basic hardware and networking knowledge</li>
+                        <li>Skilled in Python and HTML</li>
+                        <li>Moderate knowledge of Flutter</li>
+                        <li>Learning C++ and Java</li>
+                    </ul>
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>Kitchen Helper at Bistro Papillon</li>
+                        <li>
+                            Succesful 2 week intership at Philips Eindhoven,
+                            Embeded programming section
+                        </li>
+                    </ul>
+                </description>
+                <image_me>
+                    <img src="/pictures/aboutme/vex.jpg" />
+                </image_me>
+            </aboutme>
 
-<body
-    onload="calculateTimeDiff('2006-08-31 6:22', 'time_since_birth'); calculateTimeDiff('2021-08-08 12:00', 'ageDoezel')">
-    <navbar>javascript is not loaded correctly or disabled -> reload page or enable javascript</navbar>
-    <back-to-top></back-to-top>
-    <main>
-        <aboutme>
-            <description>
-                <h1 class="titleName">Sem Van Broekhoven</h1>
-                <p>A junior software developer who loves to learn everything about programming.</p>
-                <p>Eager to learn all the little tricks to balance a program between clean and fast.</p>
-                <p>Fascinated by clean code.</p>
-                <p>Succesful <a href="/blogs/intership/philips/internship.html">internship</a> at Philips Eindhoven</p>
-                <p>Straight and logical thinker, everything can be solved with code!</p>
-            </description>
-            <image_me>
-                <img src="/pictures/aboutme/me.png">
-            </image_me>
-        </aboutme>
+            <aboutme>
+                <description>
+                    <div>
+                        <h1 class="titleName">My four-legged friend</h1>
+                        <p>I have a dog! His name is Doezel.</p>
+                        <p>He is <span id="ageDoezel">2</span> years old</p>
+                        <p>
+                            He's a cute and playful chocolate brown Labradoodle.
+                            He loves walks in the forest, playing with soccer
+                            balls and sometimes destroys them.
+                        </p>
+                    </div>
+                    <div>
+                        <button
+                            onclick="location.href='/pages/sub/dogpictures.html'">
+                            Click Here For Dog Pictures!
+                        </button>
+                    </div>
+                </description>
+                <image_me>
+                    <img src="/pictures/aboutme/dogpictures/doezel2.jpg" />
+                </image_me>
+            </aboutme>
 
-
-        <aboutme>
-            <description>
-                <h1 class="titleName">Who am I?</h1>
-                <p>I'm a highschool student from Belgium studying Industrial IT</p>
-                <p> I'm <span id="time_since_birth">17 years</span> old.</p>
-                <h3>hobbies</h3>
-                <ul>
-                    <li>competitive swimmer</li>
-                    <li>guitar player</li>
-                    <li>gamer and programmer</li>
-                    <li>scuba diver</li>
-                </ul>
-                <h3>Language knowledge</h3>
-                <ul>
-                    <li>Dutch - <span style="color: var(--primary);">Native language</span></li>
-                    <li>English - <span style="color: var(--secondary);">Fluently</span></li>
-                    <li>French - <span style="color: var(--secondary);">Moderate</span></li>
-                </ul>
-            </description>
-            <image_me>
-                <img src="/pictures/aboutme/swimming.jpg">
-            </image_me>
-        </aboutme>
-
-        <aboutme>
-            <description>
-                <h1 class="titleName">Programming, Not just a hobby</h1>
-                <p>My dream is to become a programmer. I'm still exploring what I like to do the most. If you have any
-                    projects for me, <a href="/pages/contact.html">contact me</a>! I'm always open to learn more.</p>
-            </description>
-            <image_me>
-
-            </image_me>
-        </aboutme>
-
-        <aboutme>
-            <description>
-                <h1 class=" titleName">Skills and Experience</h1>
-                <h3>Skills</h3>
-                <ul>
-                    <li>Basic hardware and networking knowledge</li>
-                    <li>Skilled in Python and HTML</li>
-                    <li>Moderate knowledge of Flutter</li>
-                    <li>Learning C++ and Java</li>
-                </ul>
-                <h3>Experience</h3>
-                <ul>
-                    <li>Kitchen Helper at Bistro Papillon</li>
-                    <li>Succesful 2 week intership at Philips Eindhoven, Embeded programming section</li>
-                </ul>
-            </description>
-            <image_me>
-                <img src="/pictures/aboutme/vex.jpg">
-            </image_me>
-        </aboutme>
-
-        <aboutme>
-            <description>
+            <aboutme>
+                <description>
+                    <h1 class="titleName">My music taste</h1>
+                    <p>
+                        I listen a lot of heavy metal, but I'm not scary in
+                        person!
+                    </p>
+                    <p>
+                        My favorite bands: Children of Bodom, Ice Nine Kills,
+                        Ghost, Avendged Sevenfold, The Curse Within
+                    </p>
+                    <p>I'm always open to play music together or in a band</p>
+                </description>
+                <image_me>
+                    <img src="/pictures/aboutme/me_guitar2.JPG" />
+                </image_me>
+            </aboutme>
+            <div id="what_can_i_do">
+                <h1 class="titleName dark">What can I do?</h1>
                 <div>
-                    <h1 class="titleName">My four-legged friend</h1>
-                    <p>I have a dog! His name is Doezel.</p>
-                    <p>He is <span id="ageDoezel">2</span> years old</p>
-                    <p>He's a cute and playful chocolate brown Labradoodle. He loves walks in the forest, playing with
-                        soccer balls and sometimes destroys them.</p>
+                    <ul>
+                        <li>Make simple websites with animations</li>
+                        <li>Program multiplatform apps (Flutter)</li>
+                        <li>Select and assemble a PC</li>
+                        <li>Present powerful presentations with PowerPoint</li>
+                    </ul>
                 </div>
-                <div>
-                    <button onclick="location.href='/pages/sub/dogpictures.html'">Click Here For Dog Pictures!</button>
-                </div>
-            </description>
-            <image_me>
-                <img src="/pictures/aboutme/dogpictures/doezel2.jpg">
-            </image_me>
-        </aboutme>
-
-
-        <aboutme>
-            <description>
-                <h1 class="titleName">My music taste</h1>
-                <p>I listen a lot of heavy metal, but I'm not scary in person!</p>
-                <p>My favorite bands: Children of Bodom, Ice Nine Kills, Ghost, Avendged Sevenfold, The Curse Within</p>
-                <p>I'm always open to play music together or in a band</p>
-            </description>
-            <image_me>
-
-            </image_me>
-        </aboutme>
-        <div id="what_can_i_do">
-            <h1 class="titleName dark">What can I do?</h1>
-            <div>
-                <ul>
-                    <li>Make simple websites with animations</li>
-                    <li>Program multiplatform apps (Flutter)</li>
-                    <li>Select and assemble a PC</li>
-                    <li>Present powerful presentations with PowerPoint</li>
-                </ul>
             </div>
-        </div>
-        <div class="dark" id="contact_me_container">
-            <h1 class="titleName dark">Interested?</h1>
-            <button id="contact_me_button" onclick="location.href='/pages/contact.html'">Contact Me Here!</button>
-        </div>
-        <div id="roadmap">
-            <h1 class="titleName">My ICT Roadmap</h1>
-            <roadmap>
-                <item>
-                    <timestamp>
-                        february 2015
-                    </timestamp>
-                    <description>Started using scratch</description>
-                </item>
-                <item>
-                    <timestamp>2018</timestamp>
-                    <description>First arduino Program</description>
-                </item>
-                <item>
-                    <timestamp>7 July 2020</timestamp>
-                    <description>Built first my PC</description>
-                </item>
-                <item>
-                    <timestamp>16 May - 23 June 2021</timestamp>
-                    <description>Built 2 more PC's for friends</description>
-                </item>
-                <item>
-                    <timestamp>1 September 2022</timestamp>
-                    <description>Started studying Industrial ICT</description>
-                </item>
-                <item>
-                    <timestamp>5 September 2022</timestamp>
-                    <description>Started learning Python</description>
-                </item>
-                <item>
-                    <timestamp>June 2023</timestamp>
-                    <description>Started learning HTML, CSS and Javascript</description>
-                </item>
-                <item>
-                    <timestamp>August 2023</timestamp>
-                    <description>Started learning Dart</description>
-                </item>
-                <item>
-                    <timestamp>4 November 2023</timestamp>
-                    <description>Started making this site</description>
-                </item>
-                <item>
-                    <timestamp>6 - 17 November 2023</timestamp>
-                    <description>Intership at Philips</description>
-                </item>
-                <item>
-                    <timestamp>10 November 2023</timestamp>
-                    <description>Started working with Flutter</description>
-                </item>
-                <item>
-                    <timestamp>December 2023</timestamp>
-                    <description>Started developing gFrame</description>
-                </item>
-                <item>
-                    <timestamp></timestamp>
-                    <description></description>
-                </item>
-            </roadmap>
-        </div>
-    </main>
-    <footer></footer>
+            <div class="dark" id="contact_me_container">
+                <h1 class="titleName dark">Interested?</h1>
+                <button
+                    id="contact_me_button"
+                    onclick="location.href='/pages/contact.html'">
+                    Contact Me Here!
+                </button>
+            </div>
+            <div id="roadmap">
+                <h1 class="titleName">My ICT Roadmap</h1>
+                <roadmap>
+                    <item>
+                        <timestamp> february 2015 </timestamp>
+                        <description>Started using scratch</description>
+                    </item>
+                    <item>
+                        <timestamp>2018</timestamp>
+                        <description>First arduino Program</description>
+                    </item>
+                    <item>
+                        <timestamp>7 July 2020</timestamp>
+                        <description>Built first my PC</description>
+                    </item>
+                    <item>
+                        <timestamp>16 May - 23 June 2021</timestamp>
+                        <description>Built 2 more PC's for friends</description>
+                    </item>
+                    <item>
+                        <timestamp>1 September 2022</timestamp>
+                        <description
+                            >Started studying Industrial ICT</description
+                        >
+                    </item>
+                    <item>
+                        <timestamp>5 September 2022</timestamp>
+                        <description>Started learning Python</description>
+                    </item>
+                    <item>
+                        <timestamp>June 2023</timestamp>
+                        <description
+                            >Started learning HTML, CSS and
+                            Javascript</description
+                        >
+                    </item>
+                    <item>
+                        <timestamp>August 2023</timestamp>
+                        <description>Started learning Dart</description>
+                    </item>
+                    <item>
+                        <timestamp>4 November 2023</timestamp>
+                        <description>Started making this site</description>
+                    </item>
+                    <item>
+                        <timestamp>6 - 17 November 2023</timestamp>
+                        <description>Intership at Philips</description>
+                    </item>
+                    <item>
+                        <timestamp>10 November 2023</timestamp>
+                        <description>Started working with Flutter</description>
+                    </item>
+                    <item>
+                        <timestamp>December 2023</timestamp>
+                        <description>Started developing gFrame</description>
+                    </item>
+                    <item>
+                        <timestamp></timestamp>
+                        <description></description>
+                    </item>
+                </roadmap>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
+    <script>
+        function calculateTimeDiff(dateNtime, HTMLid) {
+            // calculate time from my birth to now
+            const birth = new Date(dateNtime); // my birth is on 4:22 but for some reason the calculations don't add up
+            const timeNow = new Date();
+            const diffInMillis = timeNow - birth;
 
-</body>
-<script>
-    function calculateTimeDiff(dateNtime, HTMLid) {
-        // calculate time from my birth to now
-        const birth = new Date(dateNtime); // my birth is on 4:22 but for some reason the calculations don't add up
-        const timeNow = new Date();
-        const diffInMillis = timeNow - birth;
+            const timePassed = new Date(diffInMillis);
+            const year = timePassed.getFullYear();
+            const yearsPassed = year - 1970; // subtract from time since epoch
+            timePassed.setFullYear(yearsPassed);
 
+            let date = timePassed.toISOString().slice(0, 10); //ISO date is yyyy-mm-dd
+            date = date.split("-");
 
-        const timePassed = new Date(diffInMillis)
-        const year = timePassed.getFullYear();
-        const yearsPassed = year - 1970; // subtract from time since epoch
-        timePassed.setFullYear(yearsPassed)
+            let time = timePassed.toString().split(" ")[4]; // time
+            time = time.split(":");
 
-        let date = timePassed.toISOString().slice(0, 10); //ISO date is yyyy-mm-dd
-        date = date.split("-");
+            const finalString = `${date[0].substring(2, 4)} years, ${
+                date[1]
+            } months, ${date[2]} days, ${time[0]} hours, ${time[1]} minutes, ${
+                time[2]
+            } seconds`;
+            document.getElementById(HTMLid).innerHTML = finalString;
 
-        let time = timePassed.toString().split(" ")[4] // time
-        time = time.split(":");
-
-        const finalString = `${date[0].substring(2, 4)} years, ${date[1]} months, ${date[2]} days, ${time[0]} hours, ${time[1]} minutes, ${time[2]} seconds`;
-        document.getElementById(HTMLid).innerHTML = finalString
-
-        setTimeout(() => { // reload the function every 10th of a second (to make it more accurate)
-            calculateTimeDiff(dateNtime, HTMLid)
-        }, 500);
-    }
-
-</script>
-
+            setTimeout(() => {
+                // reload the function every 10th of a second (to make it more accurate)
+                calculateTimeDiff(dateNtime, HTMLid);
+            }, 500);
+        }
+    </script>
 </html>
