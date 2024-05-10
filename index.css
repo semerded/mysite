@@ -14,7 +14,56 @@ article_item {
     width: 75%;
 }
 
+#titleNameWrapper {
+    background-color: rgba(39, 39, 39, 0.5);
+    position: absolute;
+    left: 0px;
+    top: 300px;
+    width: calc(100vw - var(--scrollbar-width));
+}
 
+
+#titleName_firstname {
+    color: var(--primary);
+}
+
+#titleName_lastname {
+    animation: lastnameHighlight 2s ease-in infinite reverse;
+    background: linear-gradient(to right, var(--light), var(--light), var(--light), var(--light), var(--secondary), var(--secondary), var(--light), var(--light), var(--light), var(--light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    background-size: 300%;
+    background-position: -100%;
+}
+
+
+
+@keyframes lastnameHighlight {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 100%;
+    }
+}
+
+#image_me_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+#home_me {
+    width: clamp(40%, 500px, 80%);
+    
+}
+
+#home_me img {
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -24,6 +73,7 @@ article_item {
     background-color: var(--dark);
     padding-left: 5vw;
 }
+
 
 @media (max-width: 500px) {
     #titleRoleWrapper {
@@ -191,48 +241,4 @@ h3 {
 
 
 
-.titleName:hover>#titleName_firstname {
-    color: black;
-}
 
-#titleName_lastname:hover {
-    color: var(--secondary);
-}
-
-#titleName_firstname {
-    color: var(--primary);
-}
-
-#titleName_firstname:hover {
-    color: var(--primary) !important;
-    /*? overwrite the .titlename:hover check */
-}
-
-
-
-
-
-.class {
-    color: yellow;
-}
-
-.function {
-    color: aqua;
-    font-weight: bolder;
-}
-
-.string {
-    color: greenyellow;
-}
-
-.var {
-    color: rgb(249, 49, 49);
-}
-
-.indication {
-    color: rgb(197, 5, 197);
-}
-
-.code_container {
-    font-size: 25px;
-}

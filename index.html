@@ -1,190 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- tab style -->
+        <title>Sem Van Broekhoven</title>
+        <link rel="icon" type="image_me/x-icon" href="/favicon.png" />
 
-    <!-- tab style -->
-    <title>Sem Van Broekhoven</title>
-    <link rel="icon" type="image_me/x-icon" href="/favicon.png">
+        <!-- header and footer -->
+        <script src="/header/navbar.js" defer></script>
+        <script src="/footer/footer.js" defer type="text/javascript"></script>
 
-    <!-- header and footer -->
-    <script src="/header/navbar.js" defer></script>
-    <script src="/footer/footer.js" defer type="text/javascript"></script>
+        <!-- animations -->
+        <script src="/typingEffect.js"></script>
+        <script src="/languagesProjectsCounter.js"></script>
 
-    <!-- animations -->
-    <script src="/typingEffect.js"></script>
-    <script src="/languagesProjectsCounter.js"></script>
-
-    <!-- animation init -->
-    <script>
-        function isVisible(elm) {
-            var rect = elm.getBoundingClientRect();
-            var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-            return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-        }
-
-        const titleRoleTypingEffect = new TypingEffect('titleRole', 'Junior Software Developer');
-        titleRoleTypingEffect.start();
-
-        document.addEventListener("scroll", function () {
-            let element = document.getElementById("titleRole")
-            if (isVisible(element)) {
-                if (element.innerHTML == "") {
-                    titleRoleTypingEffect.restart();
-                }
-            } else {
-                titleRoleTypingEffect.reset();
+        <!-- animation init -->
+        <script>
+            function isVisible(elm) {
+                var rect = elm.getBoundingClientRect();
+                var viewHeight = Math.max(
+                    document.documentElement.clientHeight,
+                    window.innerHeight
+                );
+                return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
             }
-        });
-    </script>
 
-    <script src="/widgets/back_to_top/back_to_top.js"></script>
+            const titleRoleTypingEffect = new TypingEffect(
+                "titleRole",
+                "Junior Software Developer"
+            );
+            titleRoleTypingEffect.start();
 
+            document.addEventListener("scroll", function () {
+                let element = document.getElementById("titleRole");
+                if (isVisible(element)) {
+                    if (element.innerHTML == "") {
+                        titleRoleTypingEffect.restart();
+                    }
+                } else {
+                    titleRoleTypingEffect.reset();
+                }
+            });
+        </script>
 
-    <!-- page style -->
-    <link rel="stylesheet" type="text/css" href="index.css" />
-</head>
+        <script src="/widgets/back_to_top/back_to_top.js"></script>
 
+        <!-- page style -->
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    </head>
 
+    <body>
+        <navbar
+            >javascript is not loaded correctly or disabled -> reload page or
+            enable javascript</navbar
+        >
+        <back-to-top></back-to-top>
 
-<body>
-    <navbar>javascript is not loaded correctly or disabled -> reload page or enable javascript</navbar>
-    <back-to-top></back-to-top>
-
-    <main>
-        <article>
-            <article_item>
-                <!--intro-->
-                <div style="margin-top: 30px;">
-                    <h1 class="titleName"><strong id="titleName_firstname">Sem </strong><strong
-                            id="titleName_lastname">Van Broekhoven</strong></h1>
-
-
-                </div>
-            </article_item>
-        </article>
-        <div id="titleRoleWrapper">
-            <h1>>&nbsp&nbsp</h1>
-            <h1 id="titleRole" class="unselectable"></h1>
-        </div>
-
-        <article style="background-color: var(--primary);">
-            <article_item id="project_view">
-                <h1 class="titleName whiteText">Highlighted Projects</h1>
-                <!--project listing-->
-                <div id="project_listing">
-                    <div class="mini_project_wrapper">
-                        <div class="mini_project">
-                            <img class="mini_project_image_me" src="/pictures/home/gFrame_logo.png">
-                            <h1 class="mini_project_name">gFrame</h1>
-                            <p class="mini_project_description">Built on top of the widely used <a
-                                    href="https://www.pygame.org/news">Pygame</a> library. It aims for easier developing
-                                with pygame. The library comes with tons of handy features and premade widgets like
-                                buttons and textboxes.</p>
-                        </div>
-
+        <main>
+            <article>
+                <article_item>
+                    <!--intro-->
+                    <div style="margin-top: 30px" id="titleNameWrapper" class="unselectable">
+                        <h1 class="titleName">
+                            <strong id="titleName_firstname">Sem </strong
+                            ><strong id="titleName_lastname"
+                                >Van Broekhoven</strong
+                            >
+                        </h1>
                     </div>
-
-                    <div class="mini_project_wrapper">
-                        <div class="mini_project">
-                            <img class="mini_project_image_me" src="/pictures/home/smartbarn_logo.png"
-                                style="border: 5px solid white;">
-                            <h1 class="mini_project_name">The Smart Barn</h1>
-                            <p class="mini_project_description">A classical final project made with the class of 6IICT
-                                (2023-2024). It aims for better living conditions for the milk cow. By implementing a
-                                smart
-                                system that will control the fans of the barn at the right speed to protect the cows
-                                from overheating and exhaustions.</p>
+                    <div id="image_me_wrapper">
+                        <div id="home_me" class="unselectable">
+                            <img src="/pictures/home/home-me.png" >
                         </div>
                     </div>
-                    <div class="mini_project_wrapper">
-                        <div class="mini_project">
-                            <img class="mini_project_image_me">
-                            <h1 class="mini_project_name">_</h1>
-                            <p class="mini_project_description"></p>
+                </article_item>
+            </article>
+            <div id="titleRoleWrapper"  class="unselectable">
+                <h1>>&nbsp&nbsp</h1>
+                <h1 id="titleRole"></h1>
+            </div>
+
+            <article style="background-color: var(--primary)">
+                <article_item id="project_view">
+                    <h1 class="titleName whiteText">Highlighted Projects</h1>
+                    <!--project listing-->
+                    <div id="project_listing">
+                        <div class="mini_project_wrapper">
+                            <div class="mini_project">
+                                <img
+                                    class="mini_project_image_me"
+                                    src="/pictures/home/gFrame_logo.png" />
+                                <h1 class="mini_project_name">gFrame</h1>
+                                <p class="mini_project_description">
+                                    Built on top of the widely used
+                                    <a href="https://www.pygame.org/news"
+                                        >Pygame</a
+                                    >
+                                    library. It aims for easier developing with
+                                    pygame. The library comes with tons of handy
+                                    features and premade widgets like buttons
+                                    and textboxes.
+                                </p>
+                            </div>
                         </div>
 
+                        <div class="mini_project_wrapper">
+                            <div class="mini_project">
+                                <img
+                                    class="mini_project_image_me"
+                                    src="/pictures/home/smartbarn_logo.png"
+                                    style="border: 5px solid white" />
+                                <h1 class="mini_project_name">
+                                    The Smart Barn
+                                </h1>
+                                <p class="mini_project_description">
+                                    A classical final project made with the
+                                    class of 6IICT (2023-2024). It aims for
+                                    better living conditions for the milk cow.
+                                    By implementing a smart system that will
+                                    control the fans of the barn at the right
+                                    speed to protect the cows from overheating
+                                    and exhaustions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mini_project_wrapper">
+                            <div class="mini_project">
+                                <img class="mini_project_image_me" />
+                                <h1 class="mini_project_name">_</h1>
+                                <p class="mini_project_description"></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div style="height: 40px;">
-                    <!--spacer-->
-                </div>
-            </article_item>
-        </article>
-        <article>
-            <article_item id="excperience_view">
-                <h1 class="titleName">Experience</h1>
-                <experience_box>
-                    Highschool: 2 years Industrial IT
-                </experience_box>
-                <experience_box>
-                    Internship: Philips Eindhoven, Embeded software departement
-                </experience_box>
-                <experience_box>
-                    Robotica: 2 times Belgian VEX champion
-                </experience_box>
-                <experience_box>
-                    Software: Embeded, Industrial, Application design, Web design
-                </experience_box>
-            </article_item>
-        </article>
-        <article id="language_view">
-            <h1 class="titleName whiteText">Languages</h1>
-            <article_item id="language_wrapper">
-                <language_box>
-                    <img class="language_image_me unselectable" src="/pictures/home/proglang/python.png">
-                    <h1 class="language_name">Python</h1>
+                    <div style="height: 40px">
+                        <!--spacer-->
+                    </div>
+                </article_item>
+            </article>
+            <article>
+                <article_item id="excperience_view">
+                    <h1 class="titleName">Experience</h1>
+                    <experience_box>
+                        Highschool: 2 years Industrial IT
+                    </experience_box>
+                    <experience_box>
+                        Internship: Philips Eindhoven, Embeded software
+                        departement
+                    </experience_box>
+                    <experience_box>
+                        Robotica: 2 times Belgian VEX champion
+                    </experience_box>
+                    <experience_box>
+                        Software: Embeded, Industrial, Application design, Web
+                        design
+                    </experience_box>
+                </article_item>
+            </article>
+            <article id="language_view">
+                <h1 class="titleName whiteText">Languages</h1>
+                <article_item id="language_wrapper">
+                    <language_box>
+                        <img
+                            class="language_image_me unselectable"
+                            src="/pictures/home/proglang/python.png" />
+                        <h1 class="language_name">Python</h1>
 
-                    <h3>Projects</h3>
-                    <p class="language_projects language_discription">0</p>
+                        <h3>Projects</h3>
+                        <p class="language_projects language_discription">0</p>
 
-                    <h3>Experience</h3>
-                    <p class="language_discription">Pygame, AI, creating Libraries</p>
-                </language_box>
-                <language_box>
-                    <img class="language_image_me unselectable" src="/pictures/home/proglang/html.png">
-                    <h1 class="language_name">HTML</h1>
-                    
-                    <h3>Projects</h3>
-                    <p class="language_projects language_discription">0</p>
-                    
-                    <h3>Experience</h3>
-                    <p class="language_discription">Websites, games, dynamic UI, CSS animations</p>
-                </language_box>
-                <language_box>
-                    <img class="language_image_me unselectable" src="/pictures/home/proglang/flutter.png">
-                    <h1 class="language_name">Flutter</h1>
-                    
-                    <h3>Projects</h3>
-                    <p class="language_projects language_discription">0</p>
-                    
-                    <h3>Experience</h3>
-                    <p class="language_discription">App development, Bluetooth, Android</p>
-                </language_box>
-                <language_box>
-                    <img class="language_image_me" src="/pictures/home/proglang/c++.png">
-                    <h1 class="language_name">C++</h1>
-                    
-                    <h3>Projects</h3>
-                    <p class="language_projects language_discription">0</p>
-                    
-                    <h3>Experience</h3>
-                    <p class="language_discription">Vex Robotics, Amp HAL st</p>
-                </language_box>
-            </article_item>
-        </article>
-        <article>
-            <article_item>
-                <h1 class="">This site is still a work in progress</h1>
+                        <h3>Experience</h3>
+                        <p class="language_discription">
+                            Pygame, AI, creating Libraries
+                        </p>
+                    </language_box>
+                    <language_box>
+                        <img
+                            class="language_image_me unselectable"
+                            src="/pictures/home/proglang/html.png" />
+                        <h1 class="language_name">HTML</h1>
 
-            </article_item>
-        </article>
-    </main>
-    <footer></footer>
-</body>
+                        <h3>Projects</h3>
+                        <p class="language_projects language_discription">0</p>
 
+                        <h3>Experience</h3>
+                        <p class="language_discription">
+                            Websites, games, dynamic UI, CSS animations
+                        </p>
+                    </language_box>
+                    <language_box>
+                        <img
+                            class="language_image_me unselectable"
+                            src="/pictures/home/proglang/flutter.png" />
+                        <h1 class="language_name">Flutter</h1>
 
+                        <h3>Projects</h3>
+                        <p class="language_projects language_discription">0</p>
 
+                        <h3>Experience</h3>
+                        <p class="language_discription">
+                            App development, Bluetooth, Android
+                        </p>
+                    </language_box>
+                    <language_box>
+                        <img
+                            class="language_image_me"
+                            src="/pictures/home/proglang/c++.png" />
+                        <h1 class="language_name">C++</h1>
+
+                        <h3>Projects</h3>
+                        <p class="language_projects language_discription">0</p>
+
+                        <h3>Experience</h3>
+                        <p class="language_discription">
+                            Vex Robotics, Amp HAL st
+                        </p>
+                    </language_box>
+                </article_item>
+            </article>
+            <article>
+                <article_item>
+                    <h1 class="">This site is still a work in progress</h1>
+                </article_item>
+            </article>
+        </main>
+        <footer></footer>
+    </body>
 </html>

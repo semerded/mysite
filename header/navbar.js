@@ -1,3 +1,6 @@
+document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+
+
 fetch("/header/navbar.html")
     .then(response => {
         return response.text()
