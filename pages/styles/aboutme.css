@@ -27,9 +27,16 @@ description, image_me {
 }
 
 image_me {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 description {
@@ -93,9 +100,7 @@ description > div:has(button) {
 
 
 image_me img{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 70%;
+    width: 90%;
     
     aspect-ratio: 1 / 1;
     border: 10px solid var(--secondary);
