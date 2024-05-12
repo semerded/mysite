@@ -15,12 +15,26 @@ a {
     color: var(--secondary);
 }
 
+#footer_qoute-container {
+    display: flex;
+}
+
 #footer_qoute {
+    color: var(--light);
     text-align: center;
     font-size: 8.5vw;
     margin-top: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
     font-family: quish;
     font-weight: lighter;
+}
+
+#footer_qoute_pwr {
+    font-family: quish;
+
+    font-size: 4.5vw;
+    padding-top: 1.7vw;
 }
 
 #footer_logo {
