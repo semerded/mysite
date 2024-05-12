@@ -17,6 +17,8 @@ a {
 
 #footer_qoute-container {
     display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
 }
 
 #footer_qoute {
