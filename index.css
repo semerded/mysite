@@ -14,6 +14,12 @@ article_item {
     width: 75%;
 }
 
+#introductionWrapper {
+    background-image: url(/pictures/home/home-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 #titleNameWrapper {
     background-color: rgba(39, 39, 39, 0.5);
     position: absolute;
