@@ -11,6 +11,10 @@
 
 }
 
+main {
+    background-image: none;
+}
+
 a {
     color: var(--secondary);
 }
