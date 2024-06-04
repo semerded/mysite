@@ -4,9 +4,12 @@ contact {
     justify-content: space-between;
     margin-left: 15vw;
     margin-right: 15vw;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
 
+    box-shadow: 10px 5px 15px black;
 }
 
 
@@ -59,15 +62,40 @@ contact button:nth-child(1) {
     background-color: var(--secondary);
 }
 
-@media (max-width: 580px) {
-    contact button, contact #_buttonSpacer{
-        width: 30vw;
-    }
-}
-
 @media (max-width: 1150px) {
     contact {
         justify-content: center;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 580px) {
+    contact button, contact #_buttonSpacer{
+        width: 25vw;
+    }
+
+    .contact_header_wrapper {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0px;
+
+    }
+
+    .contact_header_wrapper > img {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 440px) {
+    contact > div:has(button) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    contact button, contact #_buttonSpacer {
+        width: 50vw;
     }
 }
