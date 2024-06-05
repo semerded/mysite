@@ -10,6 +10,10 @@ main {
 article {
     background-color: rgba(255, 255, 255, 0.85);
     width: 50vw;
+    padding-left: max(5vw, 30px);
+    padding-right: max(5vw, 30px);
+    box-shadow: 0px 0px 30px black;
+
 }
 
 @media (max-width: 900px) {

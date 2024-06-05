@@ -13,8 +13,7 @@
     <script src="/header/navbar.js" activeNavButton="navButton_blog" defer></script>
     <script src="/footer/footer.js" defer type="text/javascript"></script>
 
-    <link rel="stylesheet" type="text/css" href="internship.css" />
-    <script src="/blogs/intership/philips/internship.js"></script>
+    <link rel="stylesheet" type="text/css" href="/blogs/blogs.css" />
 
     <script src="/widgets/back_to_top/back_to_top.js"></script>
 
@@ -44,8 +43,7 @@
                 <p>I have to say: this is an amazing place to do an internship. I was provided with a testboard that
                     they used to simulate the connection between the device and the surroundings</p>
                     <div id="board_img_wrapper">
-                <img src="/pictures/stm32board.png" alt="stm32 nucleo-144" title="stm32 nucleo-144" id="board_img"
-                    onclick="rotateBoardImg()">
+                <img src="/pictures/stm32board.png" alt="stm32 nucleo-144" title="stm32 nucleo-144" id="board_img">
                     </div>
                 <figcaption><i>The test board that was used</i></figcaption><br>
                 <p>The team that I'll be visiting during my internship will be the connectivity group. They make the
@@ -55,11 +53,11 @@
 
             <line></line>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>First Test With The Test Board</h1>
                     <h3><i>23/10/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>It was a whole process making the board work, but after a lot of hours of work I finally
                             managed to do it. Here is my story.
                         </p>
@@ -81,18 +79,18 @@
                             a day and took the board with me the next day to show it to my teacher and figure out how it
                             worked.
                         </p>
-                    </article>
+                    </blog-text>
                     <line></line>
 
                 </div>
-            </div>
+            </blog-segment>
 
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>Making The Website</h1>
                     <h3><i>30/10/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>I thought it was a nice little extra to make a website. I had made websites in the past but
                             mostly to play little games on. This was the first time I had to make an actual informatif
                             website.
@@ -116,16 +114,16 @@
                             internship but I may add more blogs later. I will write a blog every day after my internship
                             at Philips about my experience.
                         </p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog" id="day_one">
+            <blog-segment id="day_one">
                 <div class="blog_block">
                     <h1>My first day at Philips</h1>
                     <h3><i>06/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>Today was my first day at Philips. Let me tell you!
                         </p>
                         <p>Yes I'm doing an internship in Eindhoven while I live in 'boerengat' Maaseik. luckily the
@@ -160,16 +158,16 @@
                             calculations)</blockquote>I couldn't finish it today so tomorrow is another day!</p>
                         <p>It was cool seeing how a team works in an office and how it exactly works. I will also be
                             working with a small robot that I'll be controlling with a mobile app!</p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>Day 2 (I'm really not that creative)</h1>
                     <h3><i>07/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>Today, I was too late... But I can blame traffic. Traffic is the only downsight of my
                             internship, it is a 1 hour drive (if you're lucky).
                         </p>
@@ -206,16 +204,16 @@
                         </p>
                         <p>Tomorrow is a Wednesday but I still have to work from 8 to 5 so I'll miss my swimming
                             practice :(</p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>A longer Wednesday than normal</h1>
                     <h3><i>08/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>To be honest, the day passed like a speed train. But normally on Wednesday I have actual
                             interesting classes.
                         </p>
@@ -253,16 +251,16 @@
                             ask me how I did that!</p>
                         <p>That was it for today!</p>
 
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>4th day!</h1>
                     <h3><i>09/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>Today we worked on the MotorShieldController. This will make it easier to configure and run
                             the motors.
                         </p>
@@ -294,16 +292,16 @@
                         <p>Tomorrow we will work on connecting the robot to my smartphone using BLE (Bluetooth Low
                             Energy) used in the Connectivity group. Then I'll finally do the things they do on my
                             department!</p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>The end of the first week</h1>
                     <h3><i>10/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>This week passed really fast! I'll tell you what I did today and give a short recap of this
                             week.</p>
                         <p>I started with another layer on the code for the robot. This code was a little bit more
@@ -343,16 +341,16 @@
                         <p>I learned working with unit testing, clean code, C++ development, Flutter development, test
                             driven development, SOLID principles, red green refactor, pair programming and
                             agile way of working.</p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>Over the half way mark</h1>
                     <h3><i>13/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>
                             So we confirmed that the wrong bluetooth setup on the board was indeed the reason of the
                             crashing. I tried making it so that wouldn't happend again. This was unfortunatly not
@@ -393,16 +391,16 @@
                             robot and isolate it from the rest. This is easier for the user to see what to connect to
                         </p>
                         <p>That was it for today!</p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>Well... A longer tuesday</h1>
                     <h3><i>14/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>The day started with reflecting on what we did yesterday. I showed what I did with the app at
                             home and we tried it out. The idea I had was to isolate the BLE robot from the rest (place
                             it on top of the rest) but Rob said: what if you have more controllers. Well... That was a
@@ -424,16 +422,16 @@
                             flutter today and made his first app.</p>
                         <p>Tomorrow I'll work on writing data with the robot control interface and tidying up the app.
                         </p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>Wednesday</h1>
                     <h3><i>15/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>The day started with connecting the bluetooth screen to the control screen. I just finished
                             it in time for the daily standup (a part of the agile way of working where we talk about
                             what we did the previous day and what
@@ -450,16 +448,16 @@
                             to fix that tomorrow (I spent too much time already fixing that bug). I had a nice
                             discussion with Mike about how I should tackle this problem.</p>
                         <h3>But that is a problem for tomorrow!</h3>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>First showcase of the project</h1>
                     <h3><i>16/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>
                             I had to fix the small bug. I just had to. But everything I tried didn't work. For context:
                             the robot sometimes doesn't receive the data send from my phone. And there is a good reason
@@ -500,16 +498,16 @@
                             bluetooth connections. That would be way easier for the customer to understand. I also made
                             an info screen in case the robot wouldn't connect.</p>
                         <p>I'm still working on it! Also my teacher will visit the office tomorrow. Until then!</p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
+            </blog-segment>
 
-            <div class="blog">
+            <blog-segment>
                 <div class="blog_block">
                     <h1>An emotional end</h1>
                     <h3><i>17/11/2023</i></h3>
-                    <article>
+                    <blog-text>
                         <p>Well... It was the last day already. These 2 weeks flew by. I started with implementing the
                             redesigned characteristics and tidying up the UI. The new characteristics were a
                             gamechanger. Way less and more stable code!
@@ -541,28 +539,10 @@
                         <p>I'll keep updating the app until I'm happy! I'll also upload some photos.<br>This was
                             <storng>absolutely awesome!</storng>
                         </p>
-                    </article>
+                    </blog-text>
                     <line></line>
                 </div>
-            </div>
-
-            <!-- blog template -->
-            <!-- <div class="blog">
-                <div class="blog_block">
-                    <h1>Title</h1>
-                    <h3><i>17/11/2023</i></h3>
-                    <article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi enim omnis tempore tenetur dolorem cupiditate, voluptas molestiae nesciunt, minima saepe dignissimos mollitia placeat nam, libero earum dicta unde officiis.
-                        Ipsam nobis ullam soluta minus atque laudantium unde, quibusdam labore in sequi sunt quo eveniet dolores! Repudiandae laboriosam placeat neque itaque soluta est inventore iusto quaerat et, non fugiat similique!
-                        Asperiores incidunt, sint consectetur temporibus porro amet laudantium. Quas ut alias laudantium possimus quaerat distinctio, libero sed sit culpa architecto error voluptates et? Distinctio ea beatae consequatur nostrum, amet animi?
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quae fuga? Laudantium, iure,
-                            reprehenderit praesentium voluptatum expedita minus molestiae explicabo minima deserunt
-                            sapiente ipsam ducimus perspiciatis, sequi dolorum modi natus!</p>
-                    </article>
-                    <line></line>
-                </div>
-            </div> -->
+            </blog-segment>
             <article>
     </main>
     <footer></footer>
