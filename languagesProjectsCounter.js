@@ -1,7 +1,8 @@
 const projectCountPerLanguage = [
     25, // python
     10, // html
-    3, // flutter
+    4, // flutter
+    2, // java
     2, // C++
 ]
 
