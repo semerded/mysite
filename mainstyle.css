@@ -1,6 +1,6 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-padding-top: 74px;
+    scroll-padding-top: var(--navBarHeight);
 
 }
 

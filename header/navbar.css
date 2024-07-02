@@ -90,7 +90,7 @@ nav:has(.navButton:hover) .navButton:not(:hover) {
 #mobileMenuWrapper {
     display: none;
     width: 100vw;
-    height: calc(100vh - 74px);
+    height: calc(100vh - var(--navBarHeight));
     justify-content: center;
     align-items: center;
     
