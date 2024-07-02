@@ -1,24 +1,28 @@
-document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
-
+document.documentElement.style.setProperty(
+    "--scrollbar-width",
+    window.innerWidth - document.documentElement.clientWidth + "px"
+);
 
 fetch("/header/navbar.html")
-    .then(response => {
-        return response.text()
+    .then((response) => {
+        return response.text();
     })
-    .then(data => {
+    .then((data) => {
         document.querySelector("navbar").innerHTML = data;
-        document.getElementById("progress_bar_main").style.boxShadow = `0 0 10px 8px var(--${progressBarColor})`;
+        document.getElementById(
+            "progress_bar_main"
+        ).style.boxShadow = `0 0 10px 8px var(--${progressBarColor})`;
         setActiveNavButton(getSyncScriptParams());
     });
 
-    function getSyncScriptParams() {
-        var scripts = document.getElementsByTagName('script');
-        for (let index = 0; index < scripts.length; index++) {
-            let att = scripts[index].getAttribute('activeNavButton');
-            if (att != null) {
-                return att;
-            }
+function getSyncScriptParams() {
+    var scripts = document.getElementsByTagName("script");
+    for (let index = 0; index < scripts.length; index++) {
+        let att = scripts[index].getAttribute("activeNavButton");
+        if (att != null) {
+            return att;
         }
+    }
 }
 
 function setActiveNavButton(currentPage) {
@@ -27,7 +31,9 @@ function setActiveNavButton(currentPage) {
             setActiveNavButton(currentPage);
         }, 100);
     } else {
-        document.querySelector(`#${currentPage}`).classList.add("navButton_active");
+        document
+            .querySelector(`#${currentPage}`)
+            .classList.add("navButton_active");
     }
 }
 
@@ -39,25 +45,35 @@ window.onscroll = function () {
         width = 100;
     }
     document.getElementById("progress_bar_main").style.width = width + "vw";
-}
+};
 
 window.onresize = function () {
-    if (document.getElementById("mobileMenuWrapper").style.display == "flex" && document.body.clientWidth > 840) {
+    if (
+        document.getElementById("mobileMenuWrapper").style.display == "flex" &&
+        document.body.clientWidth > 840
+    ) {
         document.getElementById("mobileMenuWrapper").style.display = "none";
-        document.body.style.height = '';
-        document.body.style.overflowY = '';
-        document.getElementById('hamburgerCheckBox').checked = false;
+        document.body.style.height = "";
+        document.body.style.overflowY = "";
+        document.getElementById("hamburgerCheckBox").checked = false;
     }
-}
+
+    document.documentElement.style.setProperty(
+        "--scrollbar-width",
+        window.innerWidth - document.documentElement.clientWidth + "px"
+    );
+};
 
 var progressBarColor = localStorage.getItem("progress_bar_prefered_color");
 if (progressBarColor == null) {
-    progressBarColor = "secondary"
+    progressBarColor = "secondary";
 }
 
 function changeProgressBarColor() {
     progressBarColor = progressBarColor == "primary" ? "secondary" : "primary";
-    document.getElementById("progress_bar_main").style.boxShadow = `0 0 10px 8px var(--${progressBarColor})`;
+    document.getElementById(
+        "progress_bar_main"
+    ).style.boxShadow = `0 0 10px 8px var(--${progressBarColor})`;
 
     localStorage.setItem("progress_bar_prefered_color", progressBarColor);
 }
